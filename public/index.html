@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>EcoSphere</title>
+  <title>GreenDoDo</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -26,6 +26,9 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -35,13 +38,13 @@
   <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a href="index.html">GreenDoDO</a></h1>
+      <h1 class="logo me-auto"><a href="index.html">GreenDoDo</a></h1>
       <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
 
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#about">Claim</a></li>
           <li><a class="nav-link scrollto" href="#services">Services</a></li>
           <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
           <li><a class="nav-link scrollto" href="#team">Team</a></li>
@@ -83,7 +86,7 @@
         <div class="carousel-item active" style="background-image: url(assets/img/slide/slide-1.jpg)">
           <div class="carousel-container">
             <div class="container">
-              <h2 class="animate__animated animate__fadeInDown">Welcome to <span>GreenDoDO</span></h2>
+              <h2 class="animate__animated animate__fadeInDown">Welcome to <span>GreenDoDo</span></h2>
               <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
               <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
             </div>
@@ -158,12 +161,44 @@
       </div>
     </section><!-- End Featured Services Section -->
 
-    <!-- ======= About Us Section ======= -->
+    <!-- ======= Claim Section ======= -->
     <section id="about" class="about">
       <div class="container">
 
         <div class="section-title">
-          <h2>About Us</h2>
+          <h2>Claim</h2>
+          <form class="claim" action="/">
+            <div class="code">
+              <input type="text" id="claim_code" name="claim_code" placeholder="Key in the claiming code">
+              <button style="font-size:24px"><i class="fa fa-qrcode"></i></button>
+            </div>
+            <div class="reports">
+              <input type="text" id="reports" name="reports" placeholder="Reports">
+            </div>
+            <div class="description">
+              <textarea id="description" name="description" placeholder="Description" style="height: 200px; resize: none"></textarea></br>
+            </div>
+            <div class="location">
+              <input type="text" id="location" name="location" placeholder="Location"></br>
+            </div>
+            <div class="time">
+              <input type="text" id="time" name="time" placeholder="Time"></br>
+            </div>
+            <div class="document">
+              <input type="text" id="document" name="document" placeholder="Supporting Document"></br>
+            </div>
+            <div class="credit">
+              </br>
+              <p>Estimate Claiming Credit [Edit]</p>
+              <p>A lai wa?</p></br>
+            </div>
+            <div class="submit">
+              <!-- <input type="submit" id="submit" value="Submit"> -->
+              <button type="submit" href="/">Submit</button>
+            </div>
+          </form>
+        </div>
+        <!-- <h2>About Us</h2>
           <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
         </div>
 
@@ -187,11 +222,8 @@
               velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
               culpa qui officia deserunt mollit anim id est laborum
             </p>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End About Us Section -->
+          </div> -->
+    </section><!-- End Claim Section -->
 
     <!-- ======= Why Us Section ======= -->
     <section id="why-us" class="why-us">

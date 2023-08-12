@@ -671,6 +671,48 @@ section {
   margin-bottom: 0;
 }
 
+.about .claim input, textarea {
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  margin: 6px 5px;
+  width: 100%;
+}
+
+.about .claim .code #claim_code {
+  background-color: #fba69d;
+  width: 80%;
+}
+
+.about .claim input, textarea {
+  background-color: #d9d9d9;
+}
+
+.about .claim button {
+  color: white;
+  background: #252570;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
+
+.about .claim button:hover {
+  background: #5858c7;
+}
+
+.about .claim .submit button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.about .claim .code button {
+  width: 50px;
+  padding: 5px 10px;
+  border-radius: 6px;
+}
+
 /*--------------------------------------------------------------
 # Why Us
 --------------------------------------------------------------*/
