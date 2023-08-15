@@ -645,33 +645,37 @@ section {
 }
 
 /*--------------------------------------------------------------
-# About Us
+# Claim
 --------------------------------------------------------------*/
-.about .content h3 {
+.claim .content h3 {
   font-weight: 700;
   font-size: 28px;
 }
 
-.about .content ul {
+.claim .content ul {
   list-style: none;
   padding: 0;
 }
 
-.about .content ul li {
+.claim .content ul li {
   padding-bottom: 10px;
 }
 
-.about .content ul i {
+.claim .content ul i {
   font-size: 20px;
   padding-right: 4px;
   color: #5cb874;
 }
 
-.about .content p:last-child {
+.claim .content p:last-child {
   margin-bottom: 0;
 }
 
-.about .claim input, textarea {
+/*--------------------------------------------------------------
+# Form
+--------------------------------------------------------------*/
+
+.form input, textarea {
   border: none;
   padding: 10px;
   border-radius: 6px;
@@ -679,16 +683,25 @@ section {
   width: 100%;
 }
 
-.about .claim .code #claim_code {
-  background-color: #fba69d;
-  width: 80%;
-}
-
-.about .claim input, textarea {
+.form input, textarea {
   background-color: #d9d9d9;
 }
 
-.about .claim button {
+.form .code #claim_code {
+  background-color: #fba69d;
+  width: 80%;
+  margin-right: 0px;
+}
+
+.form #amount {
+  background-color: #9bd7f5;
+}
+
+.form #type {
+  background-color: #7fa4bacd;
+}
+
+.form button {
   color: white;
   background: #252570;
   text-align: center;
@@ -696,22 +709,25 @@ section {
   cursor: pointer;
 }
 
-.about .claim button:hover {
+.form button:hover {
   background: #5858c7;
 }
 
-.about .claim .submit button {
-  width: 100%;
+.form .submit button {
+  width: 90%;
+  margin-top: 20px;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 50px;
   font-size: 16px;
 }
 
-.about .claim .code button {
+.form .code button {
   width: 50px;
   padding: 5px 10px;
   border-radius: 6px;
 }
+
+
 
 /*--------------------------------------------------------------
 # Why Us
@@ -1446,38 +1462,19 @@ section {
   color: #fff;
   font-size: 14px;
   text-align: center;
-  padding: 30px 0;
+  padding: 15px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
-#footer h3 {
-  font-size: 36px;
-  font-weight: 700;
-  color: #fff;
-  position: relative;
-  font-family: "Poppins", sans-serif;
-  padding: 0;
-  margin: 0 0 15px 0;
-}
-
-#footer p {
-  font-size: 15;
-  font-style: italic;
-  padding: 0;
-  margin: 0 0 40px 0;
-}
-
-#footer .social-links {
-  margin: 0 0 40px 0;
-}
-
-#footer .social-links a {
+#footer a {
   font-size: 18px;
   display: inline-block;
-  background: #5cb874;
   color: #fff;
   line-height: 1;
   padding: 8px 0;
-  margin-right: 4px;
+  margin: 0 10%;
   border-radius: 50%;
   text-align: center;
   width: 36px;
@@ -1485,16 +1482,8 @@ section {
   transition: 0.3s;
 }
 
-#footer .social-links a:hover {
+#footer a:hover {
   background: #449d5b;
   color: #fff;
   text-decoration: none;
-}
-
-#footer .copyright {
-  margin: 0 0 5px 0;
-}
-
-#footer .credits {
-  font-size: 13px;
 }
