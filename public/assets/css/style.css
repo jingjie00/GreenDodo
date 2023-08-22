@@ -37,6 +37,11 @@ hr {
   margin: 30px 0;
 }
 
+#logo {
+  height: 100px;
+  width: 100px;
+}
+
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -605,77 +610,6 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Featured Services
---------------------------------------------------------------*/
-.featured-services {
-  padding: 20px 0;
-}
-
-.featured-services .icon-box {
-  padding: 20px;
-}
-
-.featured-services .icon-box-bg {
-  background-image: linear-gradient(0deg, #222222 0%, #2f2f2f 50%, #222222 100%);
-}
-
-.featured-services .icon {
-  margin-bottom: 15px;
-}
-
-.featured-services .icon i {
-  color: #5cb874;
-  font-size: 42px;
-}
-
-.featured-services .title {
-  font-weight: 700;
-  margin-bottom: 15px;
-  font-size: 18px;
-}
-
-.featured-services .title a {
-  color: #222222;
-  transition: 0.3s;
-}
-
-.featured-services .icon-box:hover .title a {
-  color: #5cb874;
-}
-
-.featured-services .description {
-  line-height: 24px;
-  font-size: 14px;
-}
-
-/*--------------------------------------------------------------
-# Claim
---------------------------------------------------------------*/
-.claim .content h3 {
-  font-weight: 700;
-  font-size: 28px;
-}
-
-.claim .content ul {
-  list-style: none;
-  padding: 0;
-}
-
-.claim .content ul li {
-  padding-bottom: 10px;
-}
-
-.claim .content ul i {
-  font-size: 20px;
-  padding-right: 4px;
-  color: #5cb874;
-}
-
-.claim .content p:last-child {
-  margin-bottom: 0;
-}
-
-/*--------------------------------------------------------------
 # Form
 --------------------------------------------------------------*/
 
@@ -731,6 +665,47 @@ section {
   border-radius: 6px;
 }
 
+/*--------------------------------------------------------------
+# Profile
+--------------------------------------------------------------*/
+
+.profile-box {
+  background-color: #252570;
+  height: 300px;
+}
+
+
+/*--------------------------------------------------------------
+# Claim
+--------------------------------------------------------------*/
+.claim .content h3 {
+  font-weight: 700;
+  font-size: 28px;
+}
+
+.claim .content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.claim .content ul li {
+  padding-bottom: 10px;
+}
+
+.claim .content ul i {
+  font-size: 20px;
+  padding-right: 4px;
+  color: #5cb874;
+}
+
+.claim .content p:last-child {
+  margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+# Apply
+--------------------------------------------------------------*/
+
 .apply .ads-events button {
   color: white;
   background: #252570;
@@ -747,48 +722,101 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Why Us
+# Forum
 --------------------------------------------------------------*/
-.why-us {
-  padding: 0;
+.forum .post .upper {
+  position: relative;
+  height: 300px;
+  background-color: #d9d9d9;
+  border-radius: 20px;
+  padding: 5px 10px 10px;
 }
 
-.why-us .row {
-  overflow: hidden;
+.forum .post .upper > p {
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 5px;
+  text-align: left;
 }
 
-.why-us .content-item {
-  padding: 40px;
-  border-left: 1px solid #eee;
-  border-bottom: 1px solid #eee;
-  margin: -1px;
+.forum .post .upper .inner {
+  width: 90%;
+  height: 130px;
+  position: absolute;   /* position relative to outer box */
+  top: 71%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* translate box by -50% */
+  background-color: #5d6063;
+  border-radius: 20px;
 }
 
-.why-us .content-item span {
-  display: block;
-  font-size: 24px;
-  font-weight: 400;
-  color: #6ec083;
+.forum .post .upper .inner #logo {
+  background-color: white;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  padding: 5px;
+  border-radius: 50%;
 }
 
-.why-us .content-item h4 {
-  font-size: 26px;
-  font-weight: 300;
-  padding: 0;
-  margin: 20px 0;
+.forum .post .lower > div {
+  height: 30px;
+  float: left;
+  width: 33.33%;
+  margin-top: 20px;
+  padding: 5px;
+  padding-bottom: 30px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #d9d9d9;
 }
 
-.why-us .content-item p {
-  color: #aaaaaa;
-  font-size: 15px;
-  margin: 0;
-  padding: 0;
+.forum .post .lower li {
+  color: #0967c5;
 }
 
-@media (max-width: 768px) {
-  .why-us .content-item {
-    padding: 40px 0;
-  }
+.forum .post .lower #down {
+  color: #c50909;
+}
+
+/*--------------------------------------------------------------
+# Events
+--------------------------------------------------------------*/
+
+.event-box {
+  position: relative;
+  height: 150px;
+  background-color: #d9d9d9;
+  border-radius: 15px;
+  padding: 10px 10px 8px 18px;
+  margin-top: 25px;
+}
+
+.event-box:hover {
+  /* background-color: #c8c8c8; */
+  /* border-color: #5cb874;
+  border-style: solid;
+  border-width: 1px; */
+  box-shadow: 2px 3px #5cb874;
+}
+
+.event-box .pic {
+  height: 78%;
+  margin-top: 5px;
+  width: 80px;
+  position: absolute;
+  background-color: #5f5d63;
+}
+
+.event-box .context {
+  float: right;
+  text-align: left;
+  padding: 10px;
+  margin-left: 80px;
+  /* background-color: blue; */
+
 }
 
 /*--------------------------------------------------------------
