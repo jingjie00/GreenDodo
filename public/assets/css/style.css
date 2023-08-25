@@ -157,7 +157,7 @@ hr {
 # Navigation Menu
 --------------------------------------------------------------*/
 /**
-* Desktop Navigation 
+* Desktop Navigation
 */
 .navbar {
   padding: 0;
@@ -282,7 +282,7 @@ hr {
 }
 
 /**
-* Mobile Navigation 
+* Mobile Navigation
 */
 .mobile-nav-toggle {
   color: #222222;
@@ -618,7 +618,7 @@ section {
   padding: 10px;
   border-radius: 6px;
   margin: 6px 5px;
-  width: 100%;
+  width: 98%;
 }
 
 .form input, textarea {
@@ -668,12 +668,104 @@ section {
 /*--------------------------------------------------------------
 # Profile
 --------------------------------------------------------------*/
-
-.profile-box {
-  background-color: #252570;
-  height: 300px;
+.profile {
+  position: relative;
+  top: -80px;
 }
 
+.profile #settings {
+  position: absolute;
+  color: white;
+  font-size: 25px;
+  top: 30px;
+  right: 20px;
+}
+
+.profile-box {
+  position: relative;
+  background-color: rgb(21, 40, 86);
+  height: 350px;
+  border-radius: 8%;
+}
+
+.profile-box p {
+  position: absolute;
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.profile-box #profile-id{
+  top: 56%;
+  font-size: 12px;
+  color: rgb(183, 182, 182)
+}
+
+.profile-box #bio{
+  width: 90%;
+  top: 70%;
+  font-size: 12px;
+  color: rgb(183, 182, 182)
+}
+
+#profile-pic {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.profile-box button {
+  position: absolute;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  color: white;
+  margin: 0px 7% 0px 5%;
+  border-radius: 10px;
+  height: 10%;
+  width: 35%;
+  bottom: 5%;
+}
+
+.profile-box .edit-profile {
+  position: absolute;
+  background-color: #4682B4;
+}
+
+.profile-box .points {
+  position: absolute;
+  right: 0%;
+  background-color: #FF6347;
+  margin-right: 40px;
+}
+
+.profile .rewards {
+  position: relative;
+  margin-top: 20px;
+  background-color: rgb(21, 40, 86);
+  height: 100px;
+  border-radius: 20px;
+}
+
+.profile .rewards #rewards {
+  font-size: 30px;
+  text-align: left;
+  padding-left: 20px;
+  padding-top: 10px;
+  color: white;
+}
+
+.profile .info #logo{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
 
 /*--------------------------------------------------------------
 # Claim
@@ -705,7 +797,6 @@ section {
 /*--------------------------------------------------------------
 # Apply
 --------------------------------------------------------------*/
-
 .apply .ads-events button {
   color: white;
   background: #252570;
@@ -713,12 +804,105 @@ section {
   border: none;
   cursor: pointer;
   padding: 10px 50px;
-  margin: 0px 20px;
+  margin: 0px 15px 0px 0px;
   border-radius: 10px;
+  width: 150px;
 }
 
 .apply button:hover {
   background: #5858c7;
+}
+
+/*--------------------------------------------------------------
+# Check-In
+--------------------------------------------------------------*/
+.check-in h3, p {
+  text-align: left;
+  padding: 0px 20px 5px;
+}
+
+.check-in .check-box div > div {
+  background-color: #2b6998;
+  height: 80px;
+  width: 60px;
+  margin-left: 20px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: white;
+  font-size: 12px;
+}
+
+.check-in .check-box .upper {
+  width: 63%;
+  height: 80px;
+  position: relative;
+  margin-top: 20px;
+}
+
+.check-in .check-box .upper > div {
+  position: absolute;
+}
+
+.check-in .check-box .lower {
+  width: 63%;
+  height: 80px;
+  position: relative;
+  margin-top: 5px;
+}
+
+.check-in .check-box .lower > div {
+  position: absolute;
+}
+
+.check-in .check-box .two {
+  left: 32%;
+}
+
+.check-in .check-box .three {
+  right: 0%;
+}
+
+.check-in .check-box .side {
+  top: -165px;
+  float: right;
+  height: 160px;
+  position: relative;
+
+}
+
+.check-in .check-box .side .four{
+  height: 165px;
+  width: 100px;
+  margin-right: 20px;
+}
+
+#gift {
+  height: 30px;
+  margin-top: 20px;
+}
+
+.four #gift {
+  height: 50px;
+  margin-top: 45px;
+}
+
+.check-in .check-box .four {
+  font-size: 20px;
+  font-style: bold;
+}
+
+#dot {
+  height: 10px;
+  width: 10px;
+  background-color: red;
+  left: 127px;
+  top: -3px;
+}
+
+.check-in #logo{
+  position: relative;
+  left: 65px;
+  top: 55px;
 }
 
 /*--------------------------------------------------------------
@@ -795,10 +979,6 @@ section {
 }
 
 .event-box:hover {
-  /* background-color: #c8c8c8; */
-  /* border-color: #5cb874;
-  border-style: solid;
-  border-width: 1px; */
   box-shadow: 2px 3px #5cb874;
 }
 
@@ -815,170 +995,118 @@ section {
   text-align: left;
   padding: 10px;
   margin-left: 80px;
-  /* background-color: blue; */
+}
 
+.event-box .context p {
+  padding: 0;
+  margin: 0;
 }
 
 /*--------------------------------------------------------------
-# Our Clients
+# Rewards
 --------------------------------------------------------------*/
-.clients .swiper-slide img {
-  opacity: 0.5;
-  transition: 0.3s;
+
+.rewards div {
+  border-radius: 18px;
 }
 
-.clients .swiper-slide img:hover {
-  opacity: 1;
+.rewards .progress {
+  position: relative;
+  background-color: rgb(21, 40, 86);
+  height: 200px;
 }
 
-.clients .swiper-pagination {
-  margin-top: 20px;
+.rewards .progress #pf-name {
+  padding-top: 12px;
+  font-size: 26px;
+  color: white;
+}
+
+.rewards .progress #pf-id{
+  padding-top: 25px;
+  font-size: 12px;
+  padding-left: 0px;
+  margin-left: -10px;
+}
+
+.rewards .center-box {
   position: relative;
 }
 
-.clients .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background-color: #fff;
-  opacity: 1;
-  border: 1px solid #5cb874;
-}
-
-.clients .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #5cb874;
-}
-
-/*--------------------------------------------------------------
-# Services
---------------------------------------------------------------*/
-.services .icon-box {
-  text-align: center;
-  padding: 70px 20px 80px 20px;
-  transition: all ease-in-out 0.3s;
-  background: #fff;
-  box-shadow: 0px 5px 90px 0px rgba(110, 123, 131, 0.1);
-}
-
-.services .icon-box .icon {
-  margin: 0 auto;
-  width: 100px;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: ease-in-out 0.3s;
-  position: relative;
-}
-
-.services .icon-box .icon i {
-  font-size: 36px;
-  transition: 0.5s;
-  position: relative;
-}
-
-.services .icon-box .icon svg {
+.rewards .center-box > div {
   position: absolute;
-  top: 0;
+  height: 180px;
+  width: 160px;
+  background-color: #2b6998;
+  color: white;
+  font-size: 16px;
+}
+
+.rewards .center-box > div:hover {
+  background-color: #5b9dcf;
+}
+
+.rewards .center-box .win {
+  margin-left: 10px;
   left: 0;
 }
 
-.services .icon-box .icon svg path {
-  transition: 0.5s;
-  fill: #f5f5f5;
+.rewards .center-box .how-to-play {
+  margin-right: 10px;
+  right: 0;
 }
 
-.services .icon-box h4 {
-  font-weight: 600;
-  margin: 10px 0 15px 0;
-  font-size: 22px;
+.rewards .play {
+  position: relative;
+  background-color: rgb(21, 40, 86);
+  height: 80px;
+  top: 200px;
 }
 
-.services .icon-box h4 a {
-  color: #222222;
-  transition: ease-in-out 0.3s;
+.rewards .win #gift{
+  height: 50px;
+  margin-top: 45px;
 }
 
-.services .icon-box p {
-  line-height: 24px;
-  font-size: 14px;
-  margin-bottom: 0;
+.rewards .how-to-play #question{
+  height: 50px;
+  margin-top: 45px;
 }
 
-.services .icon-box:hover {
-  border-color: #fff;
-  box-shadow: 0px 0 35px 0 rgba(0, 0, 0, 0.08);
+.rewards .play {
+  position: relative;
 }
 
-.services .iconbox-blue i {
-  color: #47aeff;
+.rewards .play:hover {
+  background: #5858c7;
 }
 
-.services .iconbox-blue:hover .icon i {
-  color: #fff;
+.rewards .play #game {
+  position: absolute;
+  height: 50px;
+  margin-top: 15px;
+  left: 100px;
 }
 
-.services .iconbox-blue:hover .icon path {
-  fill: #47aeff;
+.rewards .play p {
+  position: absolute;
+  color: white;
+  font-size: 16px;
+  top: 28px;
+  left: 150px;
 }
 
-.services .iconbox-orange i {
-  color: #ffa76e;
+/*--------------------------------------------------------------
+# Statistics
+--------------------------------------------------------------*/
+
+.statistics .graph #myChart {
+  margin-top: 30px;
 }
 
-.services .iconbox-orange:hover .icon i {
-  color: #fff;
-}
-
-.services .iconbox-orange:hover .icon path {
-  fill: #ffa76e;
-}
-
-.services .iconbox-pink i {
-  color: #e80368;
-}
-
-.services .iconbox-pink:hover .icon i {
-  color: #fff;
-}
-
-.services .iconbox-pink:hover .icon path {
-  fill: #e80368;
-}
-
-.services .iconbox-yellow i {
-  color: #ffbb2c;
-}
-
-.services .iconbox-yellow:hover .icon i {
-  color: #fff;
-}
-
-.services .iconbox-yellow:hover .icon path {
-  fill: #ffbb2c;
-}
-
-.services .iconbox-red i {
-  color: #ff5828;
-}
-
-.services .iconbox-red:hover .icon i {
-  color: #fff;
-}
-
-.services .iconbox-red:hover .icon path {
-  fill: #ff5828;
-}
-
-.services .iconbox-teal i {
-  color: #11dbcf;
-}
-
-.services .iconbox-teal:hover .icon i {
-  color: #fff;
-}
-
-.services .iconbox-teal:hover .icon path {
-  fill: #11dbcf;
+.statistics .graph h3 {
+  text-align: left;
+  margin-left: 20px;
 }
 
 /*--------------------------------------------------------------
