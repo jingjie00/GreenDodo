@@ -41,11 +41,10 @@
   <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center">
       <h1 class="logo me-auto"><a href="index.html" class="logo me-auto"><img src="assets/img/favicon.png" alt="" class="img-fluid"></a><a href="index.html">GreenDoDo</a></h1>
-      
-      
+
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="#home">Home</a></li>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="./claim.html">Claim</a></li>
           <li><a class="nav-link scrollto" href="./share.html">Share</a></li>
           <li><a class="nav-link scrollto " href="./forum.html">Forum</a></li>
@@ -88,7 +87,7 @@
   </section><!-- End Hero -->
 
   <!-- ======= Footer ======= -->
-  <footer id="footer">
+  <footer id="footer-main">
     <div class="container">
       <h3>GreenDoDo</h3>
       <p>By Team ThinkAFeature</p>
@@ -117,65 +116,62 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
-  <script
-                src="https://www.gstatic.com/firebasejs/9.13.0/firebase-app-compat.js"></script>
-            <script
-                src="https://www.gstatic.com/firebasejs/9.13.0/firebase-analytics-compat.js"></script>
-            <script
-                src="https://www.gstatic.com/firebasejs/9.13.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-analytics-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-auth-compat.js"></script>
+  
+  <script type="module">
+    const firebaseConfig = {
+      apiKey: "AIzaSyDfn6xs3W5rQfZCRK8i1XIGzX6-nTDw4y4",
+      authDomain: "thinkafeature.firebaseapp.com",
+      projectId: "thinkafeature",
+      storageBucket: "thinkafeature.appspot.com",
+      messagingSenderId: "659048992934",
+      appId: "1:659048992934:web:080ca7f103acca3ff1e467",
+      measurementId: "G-3JGTD2R8YM"
+    };
 
-            <script type="module">
-             const firebaseConfig = {
-    apiKey: "AIzaSyDfn6xs3W5rQfZCRK8i1XIGzX6-nTDw4y4",
-    authDomain: "thinkafeature.firebaseapp.com",
-    projectId: "thinkafeature",
-    storageBucket: "thinkafeature.appspot.com",
-    messagingSenderId: "659048992934",
-    appId: "1:659048992934:web:080ca7f103acca3ff1e467",
-    measurementId: "G-3JGTD2R8YM"
-  };
-          
-            // Initialize Firebase
-            const app = firebase.initializeApp(firebaseConfig);
-            const analytics = firebase.analytics(app);
-            const auth = firebase.auth(app);
+    // Initialize Firebase
+    const app = firebase.initializeApp(firebaseConfig);
+    const analytics = firebase.analytics(app);
+    const auth = firebase.auth(app);
 
-            console.log(auth);
-            
-            var ui = new firebaseui.auth.AuthUI(auth);
+    console.log(auth);
 
-            var uiConfig = {
-                    callbacks: {
-                        signInSuccessWithAuthResult: function(authResult, redirectUrl) {
-                        // User successfully signed in.
-                        // Return type determines whether we continue the redirect automatically
-                        // or whether we leave that to developer to handle.    
-                        return true;
-                    },
-                    uiShown: function() {
-                    // The widget is rendered.
-                    // Hide the loader.
-                    document.getElementById('loader').style.display = 'none';
-                    }
-                },
-                // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
-                signInFlow: 'popup',
-                autoUpgradeAnonymousUsers: true,
-                signInSuccessUrl: './claim.html',
-                signInOptions: [
-                    // Leave the lines as is for the providers you want to offer your users.
-                    firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-                    firebase.auth.EmailAuthProvider.PROVIDER_ID
-                ],
-                // Terms of service url.
-                tosUrl: 'privacy.html',
-                // Privacy policy url.
-                privacyPolicyUrl: 'privacy.html'
-            };
+    var ui = new firebaseui.auth.AuthUI(auth);
 
-            ui.start('#firebaseui-auth-container', uiConfig);
-            
-        </script>
+    var uiConfig = {
+      callbacks: {
+        signInSuccessWithAuthResult: function (authResult, redirectUrl) {
+          // User successfully signed in.
+          // Return type determines whether we continue the redirect automatically
+          // or whether we leave that to developer to handle.    
+          return true;
+        },
+        uiShown: function () {
+          // The widget is rendered.
+          // Hide the loader.
+          document.getElementById('loader').style.display = 'none';
+        }
+      },
+      // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
+      signInFlow: 'popup',
+      autoUpgradeAnonymousUsers: true,
+      signInSuccessUrl: './claim.html',
+      signInOptions: [
+        // Leave the lines as is for the providers you want to offer your users.
+        firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+        firebase.auth.EmailAuthProvider.PROVIDER_ID
+      ],
+      // Terms of service url.
+      tosUrl: 'privacy.html',
+      // Privacy policy url.
+      privacyPolicyUrl: 'privacy.html'
+    };
+
+    ui.start('#firebaseui-auth-container', uiConfig);
+
+  </script>
 
 </body>
 
