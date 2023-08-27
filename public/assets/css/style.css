@@ -613,7 +613,6 @@ section {
 /*--------------------------------------------------------------
 # Form
 --------------------------------------------------------------*/
-
 .form input, textarea {
   border: none;
   padding: 10px;
@@ -686,7 +685,7 @@ section {
   position: relative;
   background-color: rgb(21, 40, 86);
   height: 350px;
-  border-radius: 8%;
+  border-radius: 18px;
 }
 
 .profile-box p {
@@ -704,7 +703,7 @@ section {
 }
 
 .profile-box #bio{
-  width: 90%;
+  width: 93%;
   top: 70%;
   font-size: 12px;
   color: rgb(183, 182, 182)
@@ -727,28 +726,54 @@ section {
   cursor: pointer;
   font-size: 12px;
   color: white;
-  margin: 0px 7% 0px 5%;
   border-radius: 10px;
   height: 10%;
   width: 35%;
   bottom: 5%;
 }
 
+@media (min-width: 481px) {
+  /* Styles for wider screens */
+  .profile-box button {
+    margin: 0px 60px;
+
+  }
+}
+@media (max-width: 480px) {
+  /* Styles for phones */
+  .profile-box button {
+    margin: 0px 30px;
+  }
+}
+
+.profile-box .buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .profile-box .edit-profile {
-  position: absolute;
-  left: 5%;
+  left: 0;
   background-color: #4682B4;
 }
 
+.profile-box .edit-profile:hover {
+  background-color: #1f4a6c;
+}
+
 .profile-box .points {
-  position: absolute;
-  right: 0%;
+  right: 0;
   background-color: #FF6347;
-  margin-right: 40px;
+}
+
+.profile-box .points:hover {
+  background-color: #c13c24;
 }
 
 .profile .rewards {
-  position: relative;
+  justify-content: space-between; /* Distribute items evenly along the main axis */
+  align-items: center;
+  display: flex;
   margin-top: 20px;
   background-color: rgb(21, 40, 86);
   height: 100px;
@@ -758,9 +783,48 @@ section {
 .profile .rewards #rewards {
   font-size: 30px;
   text-align: left;
-  padding-left: 20px;
   padding-top: 10px;
   color: white;
+}
+
+@media (min-width: 481px) {
+  /* Styles for wider screens */
+  .profile .rewards #rewards {
+    padding-left: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Styles for phones */
+  .profile .rewards #rewards {
+    padding-left: 20px;
+  }
+}
+
+@media (min-width: 481px) {
+  /* Styles for wider screens */
+  .profile .rewards .check-in {
+    padding-right: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Styles for phones */
+  .profile .rewards .check-in {
+    padding-right: 20px;
+  }
+}
+
+.profile .rewards #check-in {
+  background-color: gold;
+  border-radius: 18px;
+  border: none;
+  padding: 5px 15px;
+}
+
+.profile .rewards #check-in:hover {
+  background-color: goldenrod;
+  color: white !important;
 }
 
 .profile .info #logo{
@@ -794,6 +858,34 @@ section {
 
 .claim .content p:last-child {
   margin-bottom: 0;
+}
+
+.claim .credit {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.claim #est-claim {
+  font-size: 30px;
+  font-weight: bold;
+  color: #090909;
+}
+
+/*--------------------------------------------------------------
+# Share
+--------------------------------------------------------------*/
+
+.share .credit {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.share #remaining-credit {
+  font-size: 30px;
+  font-weight: bold;
+  color: #090909;
 }
 
 /*--------------------------------------------------------------
@@ -910,12 +1002,22 @@ section {
 /*--------------------------------------------------------------
 # Forum
 --------------------------------------------------------------*/
+.forum .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .forum .post .upper {
+  max-width: 1000px;
   position: relative;
-  height: 300px;
   background-color: #d9d9d9;
   border-radius: 20px;
   padding: 5px 10px 10px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .forum .post .upper > p {
@@ -927,33 +1029,29 @@ section {
 }
 
 .forum .post .upper .inner {
-  width: 90%;
+  width: 94%;
   height: 130px;
-  position: absolute;   /* position relative to outer box */
-  top: 71%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* translate box by -50% */
+  align-items: center;
+  justify-content: center;
+  display: flex;
   background-color: #5d6063;
   border-radius: 20px;
 }
 
 .forum .post .upper .inner #logo {
   background-color: white;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
   padding: 5px;
   border-radius: 50%;
 }
 
 .forum .post .lower > div {
+  align-items: center;
+  justify-content: center;
+  display: flex;
   height: 30px;
   float: left;
   width: 33.33%;
   margin-top: 20px;
-  padding: 5px;
-  padding-bottom: 30px;
   border-style: solid;
   border-width: 1px;
   border-color: #d9d9d9;
@@ -970,9 +1068,16 @@ section {
 /*--------------------------------------------------------------
 # Events
 --------------------------------------------------------------*/
+.events .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .event-box {
+  overflow: auto;
   position: relative;
+  max-width: 800px;
   height: 150px;
   background-color: #d9d9d9;
   border-radius: 15px;
@@ -985,7 +1090,7 @@ section {
 }
 
 .event-box .pic {
-  height: 78%;
+  height: 120px;
   margin-top: 5px;
   width: 80px;
   position: absolute;
@@ -993,7 +1098,8 @@ section {
 }
 
 .event-box .context {
-  float: right;
+  max-width: 700px;
+  margin: 0 auto;
   text-align: left;
   padding: 10px;
   margin-left: 80px;
@@ -1007,6 +1113,11 @@ section {
 /*--------------------------------------------------------------
 # Rewards
 --------------------------------------------------------------*/
+.rewards .container {
+  max-width: 1000px;
+  justify-content: center;
+  align-items: center;
+}
 
 .rewards div {
   border-radius: 18px;
@@ -1038,10 +1149,25 @@ section {
 .rewards .center-box > div {
   position: absolute;
   height: 180px;
-  width: 160px;
+  /* max-width: 480px;
+  min-width: 160px; */
   background-color: #2b6998;
   color: white;
   font-size: 16px;
+}
+
+@media (min-width: 481px) {
+  /* Styles for wider screens */
+  .rewards .center-box > div {
+    width: 480px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Styles for phones */
+  .rewards .center-box > div {
+    width: 170px;
+  }
 }
 
 .rewards .center-box > div:hover {
@@ -1049,12 +1175,19 @@ section {
 }
 
 .rewards .center-box .win {
-  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   left: 0;
 }
 
 .rewards .center-box .how-to-play {
-  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 25px;
   right: 0;
 }
 
@@ -1067,7 +1200,6 @@ section {
 
 .rewards .win #gift{
   height: 50px;
-  margin-top: 45px;
 }
 
 .rewards .how-to-play #question{
@@ -1076,31 +1208,31 @@ section {
 }
 
 .rewards .play {
-  position: relative;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
 
 .rewards .play:hover {
-  background: #5858c7;
+  background: #3c3c7f;
 }
 
 .rewards .play #game {
-  position: absolute;
   height: 50px;
-  margin-top: 15px;
-  left: 100px;
-}
-
-.rewards .play p {
-  position: absolute;
-  color: white;
-  font-size: 16px;
-  top: 28px;
-  left: 150px;
 }
 
 /*--------------------------------------------------------------
 # Statistics
 --------------------------------------------------------------*/
+
+.statistics .graph {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
 .statistics .graph #myChart {
   margin-top: 30px;
