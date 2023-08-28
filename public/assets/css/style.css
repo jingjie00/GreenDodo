@@ -771,13 +771,18 @@ section {
 }
 
 .profile .rewards {
+  background-color: rgb(21, 40, 86);
+  margin-top: 20px;
+  padding-bottom: 20px;
+  /* height: 100px; */
+  border-radius: 20px;
+}
+
+.profile .rewards .upper {
+  padding-top: 20px;
   justify-content: space-between; /* Distribute items evenly along the main axis */
   align-items: center;
   display: flex;
-  margin-top: 20px;
-  background-color: rgb(21, 40, 86);
-  height: 100px;
-  border-radius: 20px;
 }
 
 .profile .rewards #rewards {
@@ -831,6 +836,38 @@ section {
   margin-left: auto;
   margin-right: auto;
   display: block;
+}
+
+.profile .progress-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.profile .progress-container p {
+  color: white;
+  align-self: flex-start;
+  font-size: 12px;
+}
+
+@media (min-width: 481px) {
+  /* Styles for wider screens */
+  .profile .progress-container p {
+    padding-left: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Styles for phones */
+  .profile .progress-container p {
+    padding-left: 20px;
+  }
+}
+
+.profile .progress-container #progress {
+  margin-bottom: 20px;
+  width: 90%;
 }
 
 /*--------------------------------------------------------------
@@ -1149,8 +1186,6 @@ section {
 .rewards .center-box > div {
   position: absolute;
   height: 180px;
-  /* max-width: 480px;
-  min-width: 160px; */
   background-color: #2b6998;
   color: white;
   font-size: 16px;
@@ -1538,173 +1573,75 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Contact
+# Chatbot
 --------------------------------------------------------------*/
-.contact .info {
-  border-top: 3px solid #5cb874;
-  border-bottom: 3px solid #5cb874;
-  padding: 30px;
-  background: #fff;
-  width: 100%;
-  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
-}
-
-.contact .info i {
-  font-size: 20px;
-  color: #5cb874;
-  float: left;
-  width: 44px;
-  height: 44px;
-  background: #eaf6ed;
+.chat-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50px;
-  transition: all 0.3s ease-in-out;
+  flex-direction: column;
+  margin: auto;
+  padding: 20px;
+  min-height: 59.5vh;
 }
 
-.contact .info h4 {
-  padding: 0 0 0 60px;
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 5px;
-  color: #222222;
+.chatbot .chat-message {
+  padding: 8px;
+  margin: 6px 0;
+  border-radius: 8px;
 }
 
-.contact .info p {
-  padding: 0 0 10px 60px;
-  margin-bottom: 20px;
-  font-size: 14px;
-  color: #555555;
-}
-
-.contact .info .social-links {
-  padding-left: 60px;
-}
-
-.contact .info .social-links a {
-  font-size: 18px;
-  display: inline-block;
-  background: #333;
-  color: #fff;
-  line-height: 1;
-  padding: 8px 0;
-  border-radius: 50%;
-  text-align: center;
-  width: 36px;
-  height: 36px;
-  transition: 0.3s;
-  margin-right: 10px;
-}
-
-.contact .info .social-links a:hover {
-  background: #5cb874;
-  color: #fff;
-}
-
-.contact .info .email:hover i,
-.contact .info .address:hover i,
-.contact .info .phone:hover i {
-  background: #5cb874;
-  color: #fff;
-}
-
-.contact .php-email-form {
-  width: 100%;
-  border-top: 3px solid #5cb874;
-  border-bottom: 3px solid #5cb874;
-  padding: 30px;
-  background: #fff;
-  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
-}
-
-.contact .php-email-form .form-group {
-  padding-bottom: 8px;
-}
-
-.contact .php-email-form .error-message {
-  display: none;
-  color: #fff;
-  background: #ed3c0d;
+.chatbot .bot {
+  background-color: #f0f0f0;
   text-align: left;
-  padding: 15px;
-  font-weight: 600;
+  align-self: flex-start;
 }
 
-.contact .php-email-form .error-message br+br {
-  margin-top: 25px;
+.chatbot .user {
+  color: white;
+  background-color: #5cb874;
+  text-align: right;
+  float: right;
+  align-self: flex-end;
 }
 
-.contact .php-email-form .sent-message {
-  display: none;
-  color: #fff;
-  background: #18d26e;
-  text-align: center;
-  padding: 15px;
-  font-weight: 600;
-}
-
-.contact .php-email-form .loading {
-  display: none;
-  background: #fff;
-  text-align: center;
-  padding: 15px;
-}
-
-.contact .php-email-form .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid #18d26e;
-  border-top-color: #eee;
-  animation: animate-loading 1s linear infinite;
-}
-
-.contact .php-email-form input,
-.contact .php-email-form textarea {
-  border-radius: 0;
-  box-shadow: none;
-  font-size: 14px;
-  border-radius: 4px;
-}
-
-.contact .php-email-form input:focus,
-.contact .php-email-form textarea:focus {
-  border-color: #5cb874;
-}
-
-.contact .php-email-form input {
-  height: 44px;
-}
-
-.contact .php-email-form textarea {
-  padding: 10px 12px;
-}
-
-.contact .php-email-form button[type=submit] {
-  background: #5cb874;
-  border: 0;
-  padding: 10px 24px;
-  color: #fff;
-  transition: 0.4s;
-  border-radius: 4px;
-}
-
-.contact .php-email-form button[type=submit]:hover {
-  background: #6ec083;
-}
-
-@keyframes animate-loading {
-  0% {
-    transform: rotate(0deg);
+@media (min-width: 481px) {
+  /* Styles for wider screens */
+  .chatbot .chat-message {
+    max-width: 1000px;
   }
+}
 
-  100% {
-    transform: rotate(360deg);
+@media (max-width: 480px) {
+  /* Styles for phones */
+  .chatbot .chat-message {
+    max-width: 280px;
   }
+}
+
+.chatbot .input-container {
+  display: flex;
+  /* display: inline-block; */
+  position: relative;
+}
+
+.chatbot .input-box {
+  border: 1px solid #8a8a8a;
+  border-radius: 8px;
+  flex: 1;
+  padding: 8px;
+}
+
+.chatbot .bxs-up-arrow-circle {
+  position: absolute;
+  transform: translateY(-50%);
+  right: 10px;
+  top: 20px;
+  cursor: pointer;
+  font-size: 30px;
+  color: #5cb874;
+}
+
+.chatbot .bxs-up-arrow-circle:hover {
+  color: #379650;
 }
 
 /*--------------------------------------------------------------
