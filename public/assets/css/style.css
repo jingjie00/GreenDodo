@@ -774,7 +774,6 @@ section {
   background-color: rgb(21, 40, 86);
   margin-top: 20px;
   padding-bottom: 20px;
-  /* height: 100px; */
   border-radius: 20px;
 }
 
@@ -952,88 +951,128 @@ section {
   padding: 0px 20px 5px;
 }
 
-.check-in .check-box div > div {
+.check-in .container {
+  max-width: 600px;
+}
+
+.check-in .check-box {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.check-in .check-box .left {
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+  width: 70%;
+}
+
+.check-in .check-box .right {
+  margin-top: 20px;
+  width: 30%;
+}
+
+.check-in .check-box .left .upper {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+.check-in .check-box .left .lower {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 10px;
+}
+
+.check-in .check-box .box {
   background-color: #2b6998;
-  height: 80px;
-  width: 60px;
-  margin-left: 20px;
+  width: 33%;
+  margin-left: 10px;
   border-radius: 8px;
   box-sizing: border-box;
   color: white;
   font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.check-in .check-box .upper {
-  width: 63%;
-  height: 80px;
-  position: relative;
-  margin-top: 20px;
+.check-in .check-box .box:hover {
+  background-color: #3a99e2;
 }
 
-.check-in .check-box .upper > div {
-  position: absolute;
+.check-in .check-box .right .box {
+  width: 90%;
 }
 
-.check-in .check-box .lower {
-  width: 63%;
-  height: 80px;
-  position: relative;
-  margin-top: 5px;
+@media (min-width: 481px) {
+  /* Styles for wider screens */
+  .check-in .check-box .left .box {
+    height: 130px;
+  }
 }
 
-.check-in .check-box .lower > div {
-  position: absolute;
+@media (max-width: 480px) {
+  /* Styles for phones */
+  .check-in .check-box .left .box {
+    height: 90px;
+  }
 }
 
-.check-in .check-box .two {
-  left: 32%;
+@media (min-width: 481px) {
+  /* Styles for wider screens */
+  .check-in .check-box .right .box {
+    height: 270px;
+  }
 }
 
-.check-in .check-box .three {
-  right: 0%;
-}
-
-.check-in .check-box .side {
-  top: -165px;
-  float: right;
-  height: 160px;
-  position: relative;
-
-}
-
-.check-in .check-box .side .four{
-  height: 165px;
-  width: 100px;
-  margin-right: 20px;
+@media (max-width: 480px) {
+  /* Styles for phones */
+  .check-in .check-box .right .box {
+    height: 190px;
+  }
 }
 
 #gift {
-  height: 30px;
-  margin-top: 20px;
+  width: 40px;
 }
 
-.four #gift {
-  height: 50px;
-  margin-top: 45px;
+.right .box #gift {
+  width: 70px;
 }
 
-.check-in .check-box .four {
+.check-in .check-box .right .box {
   font-size: 20px;
   font-style: bold;
 }
 
-#dot {
-  height: 10px;
-  width: 10px;
-  background-color: red;
-  left: 127px;
-  top: -3px;
+.check-in .check-box .two {
+  position: relative;
+}
+
+.check-in #dot {
+  color: red;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.chatbot .bxs-up-arrow-circle {
+  position: absolute;
+  transform: translateY(-50%);
+  right: 10px;
+  top: 20px;
+  cursor: pointer;
+  font-size: 30px;
+  color: #5cb874;
 }
 
 .check-in #logo{
-  position: relative;
-  left: 65px;
-  top: 55px;
+  margin-top: 30px;
 }
 
 /*--------------------------------------------------------------
@@ -1161,9 +1200,14 @@ section {
 }
 
 .rewards .progress {
-  position: relative;
   background-color: rgb(21, 40, 86);
   height: 200px;
+  flex-direction: column;
+}
+
+.rewards .profile-container {
+  display: flex;
+  align-items: center;
 }
 
 .rewards .progress #pf-name {
@@ -1175,8 +1219,41 @@ section {
 .rewards .progress #pf-id{
   padding-top: 25px;
   font-size: 12px;
-  padding-left: 0px;
-  margin-left: -10px;
+  margin-left: -30px;
+  margin-top: -5px;
+}
+
+.rewards .progress-container {
+  margin-top: 5px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.rewards .progress-container p {
+  color: white;
+  align-self: flex-start;
+  font-size: 12px;
+}
+
+.rewards .progress-container #progress-bar {
+  margin-bottom: 20px;
+}
+
+@media (min-width: 481px) {
+  /* Styles for wider screens */
+  .rewards .progress-container #progress-bar {
+    width: 96%;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Styles for phones */
+  .rewards .progress-container #progress-bar {
+    width: 90%;
+  }
 }
 
 .rewards .center-box {
