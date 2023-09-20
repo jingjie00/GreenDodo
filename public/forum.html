@@ -42,9 +42,9 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="./index.html">Home</a></li>
-          <li><a class="nav-link scrollto" href="#claim">Claim</a></li>
+          <li><a class="nav-link scrollto" href="./claim.html">Claim</a></li>
           <li><a class="nav-link scrollto" href="./share.html">Share</a></li>
-          <li><a class="nav-link scrollto " href="./forum.html">Forum</a></li>
+          <li><a class="nav-link scrollto " href="#forum">Forum</a></li>
           <li><a class="nav-link scrollto " href="./events.html">Events</a></li>
           <li><a class="nav-link scrollto " href="./apply.html">Apply</a></li>
           <li><a class="nav-link scrollto " href="./check-in.html">Check-In</a></li>
@@ -59,44 +59,29 @@
 
   <main id="main">
 
-    <!-- ======= Claim Section ======= -->
-    <section id="claim" class="claim">
+    <!-- ======= Forum Section ======= -->
+    <section id="forum" class="forum">
       <div class="container">
-
         <div class="section-title">
-          <h2>Claim</h2>
-          <form class="form" action="#">
-            <div class="code">
-              <input type="text" id="claim_code" name="claim_code" placeholder="Key in the claiming code">
-              <button type="button" style="font-size:24px" id="qr"><i class="fa fa-qrcode"></i></button>
+          <h2>Forum</h2>
+          <div class="post">
+            <div class="upper">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis tincidunt id aliquet risus feugiat in ante metus dictum. Eget est lorem ipsum dolor sit amet consectetur adipiscing elit. Aliquam ut porttitor leo a. </p>
+              <div class="inner">
+                <div class="circle">
+                  <img src="assets/img/favicon.png" alt="" id="logo">
+                </div>
+              </div>
             </div>
-            <div class="reports">
-              <input type="text" id="reports" name="reports" placeholder="Reports">
+            <div class="lower">
+              <div class="vote"><p><li class="bx bx-upvote"></li>&nbsp;Vote&nbsp;<li class="bx bx-downvote" id="down"></li></p></div>
+              <div class="comment"><p><li class="bx bx-message-alt"></li>&nbsp;120</p></li></div>
+              <div class="share"><p></p><li class="bx bx-share-alt"></li>&nbsp;281</p></div>
             </div>
-            <div class="description">
-              <textarea id="description" name="description" placeholder="Description" style="height: 200px; resize: none"></textarea></br>
-            </div>
-            <div class="location">
-              <input type="text" id="location" name="location" placeholder="Location"></br>
-            </div>
-            <div class="time">
-              <input type="text" id="time" name="time" placeholder="Time"></br>
-            </div>
-            <div class="document">
-              <input type="text" id="document" name="document" placeholder="Supporting Document"></br>
-            </div>
-            </br><p style="text-align: left;">Estimate Claiming Credit [Edit]</p>
-            <div class="credit">
-              <img src="assets/img/favicon.png" alt="" id="logo">
-              <p id="est-claim">0.002 kg</p>
-            </div>
-            <div class="submit">
-              <button type="submit">Submit</button>
-            </div>
-          </form>
+          </div>
         </div>
     </section>
-    <!-- End Claim Section -->
+    <!-- End Forum Section -->
 
   </main><!-- End #main -->
 

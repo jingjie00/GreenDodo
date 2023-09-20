@@ -33,6 +33,15 @@ h6 {
   font-family: "Raleway", sans-serif;
 }
 
+hr {
+  margin: 30px 0;
+}
+
+#logo {
+  height: 100px;
+  width: 100px;
+}
+
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -148,7 +157,7 @@ h6 {
 # Navigation Menu
 --------------------------------------------------------------*/
 /**
-* Desktop Navigation 
+* Desktop Navigation
 */
 .navbar {
   padding: 0;
@@ -273,7 +282,7 @@ h6 {
 }
 
 /**
-* Mobile Navigation 
+* Mobile Navigation
 */
 .mobile-nav-toggle {
   color: #222222;
@@ -437,6 +446,7 @@ h6 {
   animation-delay: 0.4s;
   margin: 0 auto 30px auto;
   color: #fff;
+  text-align: center;
 }
 
 #hero .carousel-inner .carousel-item {
@@ -601,94 +611,35 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Featured Services
+# Form
 --------------------------------------------------------------*/
-.featured-services {
-  padding: 20px 0;
-}
-
-.featured-services .icon-box {
-  padding: 20px;
-}
-
-.featured-services .icon-box-bg {
-  background-image: linear-gradient(0deg, #222222 0%, #2f2f2f 50%, #222222 100%);
-}
-
-.featured-services .icon {
-  margin-bottom: 15px;
-}
-
-.featured-services .icon i {
-  color: #5cb874;
-  font-size: 42px;
-}
-
-.featured-services .title {
-  font-weight: 700;
-  margin-bottom: 15px;
-  font-size: 18px;
-}
-
-.featured-services .title a {
-  color: #222222;
-  transition: 0.3s;
-}
-
-.featured-services .icon-box:hover .title a {
-  color: #5cb874;
-}
-
-.featured-services .description {
-  line-height: 24px;
-  font-size: 14px;
-}
-
-/*--------------------------------------------------------------
-# About Us
---------------------------------------------------------------*/
-.about .content h3 {
-  font-weight: 700;
-  font-size: 28px;
-}
-
-.about .content ul {
-  list-style: none;
-  padding: 0;
-}
-
-.about .content ul li {
-  padding-bottom: 10px;
-}
-
-.about .content ul i {
-  font-size: 20px;
-  padding-right: 4px;
-  color: #5cb874;
-}
-
-.about .content p:last-child {
-  margin-bottom: 0;
-}
-
-.about .claim input, textarea {
+.form input, textarea {
   border: none;
   padding: 10px;
   border-radius: 6px;
   margin: 6px 5px;
-  width: 100%;
+  width: 98%;
 }
 
-.about .claim .code #claim_code {
-  background-color: #fba69d;
-  width: 80%;
-}
-
-.about .claim input, textarea {
+.form input, textarea {
   background-color: #d9d9d9;
 }
 
-.about .claim button {
+.form .code #claim_code {
+  background-color: #fba69d;
+  width: 80%;
+  margin-right: 0px;
+}
+
+.form #amount {
+  background-color: #9bd7f5;
+}
+
+.form #type {
+  background-color: #7fa4bacd;
+}
+
+.form button {
   color: white;
   background: #252570;
   text-align: center;
@@ -696,228 +647,712 @@ section {
   cursor: pointer;
 }
 
-.about .claim button:hover {
+.form button:hover {
   background: #5858c7;
 }
 
-.about .claim .submit button {
-  width: 100%;
+.form .submit button {
+  width: 90%;
+  margin-top: 20px;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 50px;
   font-size: 16px;
 }
 
-.about .claim .code button {
+.form .code button {
   width: 50px;
   padding: 5px 10px;
   border-radius: 6px;
 }
 
 /*--------------------------------------------------------------
-# Why Us
+# Profile
 --------------------------------------------------------------*/
-.why-us {
-  padding: 0;
+.profile {
+  position: relative;
+  top: -80px;
 }
 
-.why-us .row {
-  overflow: hidden;
+.profile #settings {
+  position: absolute;
+  color: white;
+  font-size: 25px;
+  top: 30px;
+  right: 20px;
 }
 
-.why-us .content-item {
-  padding: 40px;
-  border-left: 1px solid #eee;
-  border-bottom: 1px solid #eee;
-  margin: -1px;
+.profile-box {
+  position: relative;
+  background-color: rgb(21, 40, 86);
+  height: 350px;
+  border-radius: 18px;
 }
 
-.why-us .content-item span {
-  display: block;
-  font-size: 24px;
-  font-weight: 400;
-  color: #6ec083;
+.profile-box p {
+  position: absolute;
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.why-us .content-item h4 {
-  font-size: 26px;
-  font-weight: 300;
-  padding: 0;
-  margin: 20px 0;
+.profile-box #profile-id{
+  top: 56%;
+  font-size: 12px;
+  color: rgb(183, 182, 182)
 }
 
-.why-us .content-item p {
-  color: #aaaaaa;
-  font-size: 15px;
-  margin: 0;
-  padding: 0;
+.profile-box #bio{
+  width: 93%;
+  top: 70%;
+  font-size: 12px;
+  color: rgb(183, 182, 182)
 }
 
-@media (max-width: 768px) {
-  .why-us .content-item {
-    padding: 40px 0;
+#profile-pic {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.profile-box button {
+  position: absolute;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  color: white;
+  border-radius: 10px;
+  height: 10%;
+  width: 35%;
+  bottom: 5%;
+}
+
+@media (min-width: 481px) {
+  /* Styles for wider screens */
+  .profile-box button {
+    margin: 0px 60px;
+
+  }
+}
+@media (max-width: 480px) {
+  /* Styles for phones */
+  .profile-box button {
+    margin: 0px 30px;
   }
 }
 
-/*--------------------------------------------------------------
-# Our Clients
---------------------------------------------------------------*/
-.clients .swiper-slide img {
-  opacity: 0.5;
-  transition: 0.3s;
-}
-
-.clients .swiper-slide img:hover {
-  opacity: 1;
-}
-
-.clients .swiper-pagination {
-  margin-top: 20px;
-  position: relative;
-}
-
-.clients .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background-color: #fff;
-  opacity: 1;
-  border: 1px solid #5cb874;
-}
-
-.clients .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #5cb874;
-}
-
-/*--------------------------------------------------------------
-# Services
---------------------------------------------------------------*/
-.services .icon-box {
-  text-align: center;
-  padding: 70px 20px 80px 20px;
-  transition: all ease-in-out 0.3s;
-  background: #fff;
-  box-shadow: 0px 5px 90px 0px rgba(110, 123, 131, 0.1);
-}
-
-.services .icon-box .icon {
-  margin: 0 auto;
-  width: 100px;
-  height: 100px;
+.profile-box .buttons {
   display: flex;
-  align-items: center;
   justify-content: center;
-  transition: ease-in-out 0.3s;
-  position: relative;
+  align-items: center;
 }
 
-.services .icon-box .icon i {
-  font-size: 36px;
-  transition: 0.5s;
-  position: relative;
-}
-
-.services .icon-box .icon svg {
-  position: absolute;
-  top: 0;
+.profile-box .edit-profile {
   left: 0;
+  background-color: #4682B4;
 }
 
-.services .icon-box .icon svg path {
-  transition: 0.5s;
-  fill: #f5f5f5;
+.profile-box .edit-profile:hover {
+  background-color: #1f4a6c;
 }
 
-.services .icon-box h4 {
-  font-weight: 600;
-  margin: 10px 0 15px 0;
-  font-size: 22px;
+.profile-box .points {
+  right: 0;
+  background-color: #FF6347;
 }
 
-.services .icon-box h4 a {
-  color: #222222;
-  transition: ease-in-out 0.3s;
+.profile-box .points:hover {
+  background-color: #c13c24;
 }
 
-.services .icon-box p {
-  line-height: 24px;
-  font-size: 14px;
+.profile .rewards {
+  background-color: rgb(21, 40, 86);
+  margin-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 20px;
+}
+
+.profile .rewards .upper {
+  padding-top: 20px;
+  justify-content: space-between; /* Distribute items evenly along the main axis */
+  align-items: center;
+  display: flex;
+}
+
+.profile .rewards #rewards {
+  font-size: 30px;
+  text-align: left;
+  padding-top: 10px;
+  color: white;
+}
+
+@media (min-width: 481px) {
+  /* Styles for wider screens */
+  .profile .rewards #rewards {
+    padding-left: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Styles for phones */
+  .profile .rewards #rewards {
+    padding-left: 20px;
+  }
+}
+
+@media (min-width: 481px) {
+  /* Styles for wider screens */
+  .profile .rewards .check-in {
+    padding-right: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Styles for phones */
+  .profile .rewards .check-in {
+    padding-right: 20px;
+  }
+}
+
+.profile .rewards #check-in {
+  background-color: gold;
+  border-radius: 18px;
+  border: none;
+  padding: 5px 15px;
+}
+
+.profile .rewards #check-in:hover {
+  background-color: goldenrod;
+  color: white !important;
+}
+
+.profile .info #logo{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.profile .progress-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.profile .progress-container p {
+  color: white;
+  align-self: flex-start;
+  font-size: 12px;
+}
+
+@media (min-width: 481px) {
+  /* Styles for wider screens */
+  .profile .progress-container p {
+    padding-left: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Styles for phones */
+  .profile .progress-container p {
+    padding-left: 20px;
+  }
+}
+
+.profile .progress-container #progress {
+  margin-bottom: 20px;
+  width: 90%;
+}
+
+/*--------------------------------------------------------------
+# Claim
+--------------------------------------------------------------*/
+.claim .content h3 {
+  font-weight: 700;
+  font-size: 28px;
+}
+
+.claim .content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.claim .content ul li {
+  padding-bottom: 10px;
+}
+
+.claim .content ul i {
+  font-size: 20px;
+  padding-right: 4px;
+  color: #5cb874;
+}
+
+.claim .content p:last-child {
   margin-bottom: 0;
 }
 
-.services .icon-box:hover {
-  border-color: #fff;
-  box-shadow: 0px 0 35px 0 rgba(0, 0, 0, 0.08);
+.claim .credit {
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 
-.services .iconbox-blue i {
-  color: #47aeff;
+.claim #est-claim {
+  font-size: 30px;
+  font-weight: bold;
+  color: #090909;
 }
 
-.services .iconbox-blue:hover .icon i {
-  color: #fff;
+/*--------------------------------------------------------------
+# Share
+--------------------------------------------------------------*/
+
+.share .credit {
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 
-.services .iconbox-blue:hover .icon path {
-  fill: #47aeff;
+.share #remaining-credit {
+  font-size: 30px;
+  font-weight: bold;
+  color: #090909;
 }
 
-.services .iconbox-orange i {
-  color: #ffa76e;
+/*--------------------------------------------------------------
+# Apply
+--------------------------------------------------------------*/
+.apply .ads-events button {
+  color: white;
+  background: #252570;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  padding: 10px 50px;
+  margin: 0px 15px 0px 0px;
+  border-radius: 10px;
+  width: 150px;
 }
 
-.services .iconbox-orange:hover .icon i {
-  color: #fff;
+.apply button:hover {
+  background: #5858c7;
 }
 
-.services .iconbox-orange:hover .icon path {
-  fill: #ffa76e;
+/*--------------------------------------------------------------
+# Check-In
+--------------------------------------------------------------*/
+.check-in h3, p {
+  text-align: left;
+  padding: 0px 20px 5px;
 }
 
-.services .iconbox-pink i {
-  color: #e80368;
+.check-in .container {
+  max-width: 600px;
 }
 
-.services .iconbox-pink:hover .icon i {
-  color: #fff;
+.check-in .check-box {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
 }
 
-.services .iconbox-pink:hover .icon path {
-  fill: #e80368;
+.check-in .check-box .left {
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+  width: 70%;
 }
 
-.services .iconbox-yellow i {
-  color: #ffbb2c;
+.check-in .check-box .right {
+  margin-top: 20px;
+  width: 30%;
 }
 
-.services .iconbox-yellow:hover .icon i {
-  color: #fff;
+.check-in .check-box .left .upper {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 20px;
 }
 
-.services .iconbox-yellow:hover .icon path {
-  fill: #ffbb2c;
+.check-in .check-box .left .lower {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 10px;
 }
 
-.services .iconbox-red i {
-  color: #ff5828;
+.check-in .check-box .box {
+  background-color: #2b6998;
+  width: 33%;
+  margin-left: 10px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: white;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.services .iconbox-red:hover .icon i {
-  color: #fff;
+.check-in .check-box .box:hover {
+  background-color: #3a99e2;
 }
 
-.services .iconbox-red:hover .icon path {
-  fill: #ff5828;
+.check-in .check-box .right .box {
+  width: 90%;
 }
 
-.services .iconbox-teal i {
-  color: #11dbcf;
+@media (min-width: 481px) {
+  /* Styles for wider screens */
+  .check-in .check-box .left .box {
+    height: 130px;
+  }
 }
 
-.services .iconbox-teal:hover .icon i {
-  color: #fff;
+@media (max-width: 480px) {
+  /* Styles for phones */
+  .check-in .check-box .left .box {
+    height: 90px;
+  }
 }
 
-.services .iconbox-teal:hover .icon path {
-  fill: #11dbcf;
+@media (min-width: 481px) {
+  /* Styles for wider screens */
+  .check-in .check-box .right .box {
+    height: 270px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Styles for phones */
+  .check-in .check-box .right .box {
+    height: 190px;
+  }
+}
+
+#gift {
+  width: 40px;
+}
+
+.right .box #gift {
+  width: 70px;
+}
+
+.check-in .check-box .right .box {
+  font-size: 20px;
+  font-style: bold;
+}
+
+.check-in .check-box .two {
+  position: relative;
+}
+
+.check-in #dot {
+  color: red;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.chatbot .bxs-up-arrow-circle {
+  position: absolute;
+  transform: translateY(-50%);
+  right: 10px;
+  top: 20px;
+  cursor: pointer;
+  font-size: 30px;
+  color: #5cb874;
+}
+
+.check-in #logo{
+  margin-top: 30px;
+}
+
+/*--------------------------------------------------------------
+# Forum
+--------------------------------------------------------------*/
+.forum .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.forum .post .upper {
+  max-width: 1000px;
+  position: relative;
+  background-color: #d9d9d9;
+  border-radius: 20px;
+  padding: 5px 10px 10px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.forum .post .upper > p {
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 5px;
+  text-align: left;
+}
+
+.forum .post .upper .inner {
+  width: 94%;
+  height: 130px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background-color: #5d6063;
+  border-radius: 20px;
+}
+
+.forum .post .upper .inner #logo {
+  background-color: white;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+.forum .post .lower > div {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: 30px;
+  float: left;
+  width: 33.33%;
+  margin-top: 20px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #d9d9d9;
+}
+
+.forum .post .lower li {
+  color: #0967c5;
+}
+
+.forum .post .lower #down {
+  color: #c50909;
+}
+
+/*--------------------------------------------------------------
+# Events
+--------------------------------------------------------------*/
+.events .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.event-box {
+  overflow: auto;
+  position: relative;
+  max-width: 800px;
+  height: 150px;
+  background-color: #d9d9d9;
+  border-radius: 15px;
+  padding: 10px 10px 8px 18px;
+  margin-top: 25px;
+}
+
+.event-box:hover {
+  box-shadow: 2px 3px #5cb874;
+}
+
+.event-box .pic {
+  height: 120px;
+  margin-top: 5px;
+  width: 80px;
+  position: absolute;
+  background-color: #5f5d63;
+}
+
+.event-box .context {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+  padding: 10px;
+  margin-left: 80px;
+}
+
+.event-box .context p {
+  padding: 0;
+  margin: 0;
+}
+
+/*--------------------------------------------------------------
+# Rewards
+--------------------------------------------------------------*/
+.rewards .container {
+  max-width: 1000px;
+  justify-content: center;
+  align-items: center;
+}
+
+.rewards div {
+  border-radius: 18px;
+}
+
+.rewards .progress {
+  background-color: rgb(21, 40, 86);
+  height: 200px;
+  flex-direction: column;
+}
+
+.rewards .profile-container {
+  display: flex;
+  align-items: center;
+}
+
+.rewards .progress #pf-name {
+  padding-top: 12px;
+  font-size: 26px;
+  color: white;
+}
+
+.rewards .progress #pf-id{
+  padding-top: 25px;
+  font-size: 12px;
+  margin-left: -30px;
+  margin-top: -5px;
+}
+
+.rewards .progress-container {
+  margin-top: 5px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.rewards .progress-container p {
+  color: white;
+  align-self: flex-start;
+  font-size: 12px;
+}
+
+.rewards .progress-container #progress-bar {
+  margin-bottom: 20px;
+}
+
+@media (min-width: 481px) {
+  /* Styles for wider screens */
+  .rewards .progress-container #progress-bar {
+    width: 96%;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Styles for phones */
+  .rewards .progress-container #progress-bar {
+    width: 90%;
+  }
+}
+
+.rewards .center-box {
+  position: relative;
+}
+
+.rewards .center-box > div {
+  position: absolute;
+  height: 180px;
+  background-color: #2b6998;
+  color: white;
+  font-size: 16px;
+}
+
+@media (min-width: 481px) {
+  /* Styles for wider screens */
+  .rewards .center-box > div {
+    width: 480px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Styles for phones */
+  .rewards .center-box > div {
+    width: 170px;
+  }
+}
+
+.rewards .center-box > div:hover {
+  background-color: #5b9dcf;
+}
+
+.rewards .center-box .win {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  left: 0;
+}
+
+.rewards .center-box .how-to-play {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 25px;
+  right: 0;
+}
+
+.rewards .play {
+  position: relative;
+  background-color: rgb(21, 40, 86);
+  height: 80px;
+  top: 200px;
+}
+
+.rewards .win #gift{
+  height: 50px;
+}
+
+.rewards .how-to-play #question{
+  height: 50px;
+  margin-top: 45px;
+}
+
+.rewards .play {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.rewards .play:hover {
+  background: #3c3c7f;
+}
+
+.rewards .play #game {
+  height: 50px;
+}
+
+/*--------------------------------------------------------------
+# Statistics
+--------------------------------------------------------------*/
+
+.statistics .graph {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.statistics .graph #myChart {
+  margin-top: 30px;
+}
+
+.statistics .graph h3 {
+  text-align: left;
+  margin-left: 20px;
 }
 
 /*--------------------------------------------------------------
@@ -1215,173 +1650,75 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Contact
+# Chatbot
 --------------------------------------------------------------*/
-.contact .info {
-  border-top: 3px solid #5cb874;
-  border-bottom: 3px solid #5cb874;
-  padding: 30px;
-  background: #fff;
-  width: 100%;
-  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
-}
-
-.contact .info i {
-  font-size: 20px;
-  color: #5cb874;
-  float: left;
-  width: 44px;
-  height: 44px;
-  background: #eaf6ed;
+.chat-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50px;
-  transition: all 0.3s ease-in-out;
+  flex-direction: column;
+  margin: auto;
+  padding: 20px;
+  min-height: 59.5vh;
 }
 
-.contact .info h4 {
-  padding: 0 0 0 60px;
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 5px;
-  color: #222222;
+.chatbot .chat-message {
+  padding: 8px;
+  margin: 6px 0;
+  border-radius: 8px;
 }
 
-.contact .info p {
-  padding: 0 0 10px 60px;
-  margin-bottom: 20px;
-  font-size: 14px;
-  color: #555555;
-}
-
-.contact .info .social-links {
-  padding-left: 60px;
-}
-
-.contact .info .social-links a {
-  font-size: 18px;
-  display: inline-block;
-  background: #333;
-  color: #fff;
-  line-height: 1;
-  padding: 8px 0;
-  border-radius: 50%;
-  text-align: center;
-  width: 36px;
-  height: 36px;
-  transition: 0.3s;
-  margin-right: 10px;
-}
-
-.contact .info .social-links a:hover {
-  background: #5cb874;
-  color: #fff;
-}
-
-.contact .info .email:hover i,
-.contact .info .address:hover i,
-.contact .info .phone:hover i {
-  background: #5cb874;
-  color: #fff;
-}
-
-.contact .php-email-form {
-  width: 100%;
-  border-top: 3px solid #5cb874;
-  border-bottom: 3px solid #5cb874;
-  padding: 30px;
-  background: #fff;
-  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
-}
-
-.contact .php-email-form .form-group {
-  padding-bottom: 8px;
-}
-
-.contact .php-email-form .error-message {
-  display: none;
-  color: #fff;
-  background: #ed3c0d;
+.chatbot .bot {
+  background-color: #f0f0f0;
   text-align: left;
-  padding: 15px;
-  font-weight: 600;
+  align-self: flex-start;
 }
 
-.contact .php-email-form .error-message br+br {
-  margin-top: 25px;
+.chatbot .user {
+  color: white;
+  background-color: #5cb874;
+  text-align: right;
+  float: right;
+  align-self: flex-end;
 }
 
-.contact .php-email-form .sent-message {
-  display: none;
-  color: #fff;
-  background: #18d26e;
-  text-align: center;
-  padding: 15px;
-  font-weight: 600;
-}
-
-.contact .php-email-form .loading {
-  display: none;
-  background: #fff;
-  text-align: center;
-  padding: 15px;
-}
-
-.contact .php-email-form .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid #18d26e;
-  border-top-color: #eee;
-  animation: animate-loading 1s linear infinite;
-}
-
-.contact .php-email-form input,
-.contact .php-email-form textarea {
-  border-radius: 0;
-  box-shadow: none;
-  font-size: 14px;
-  border-radius: 4px;
-}
-
-.contact .php-email-form input:focus,
-.contact .php-email-form textarea:focus {
-  border-color: #5cb874;
-}
-
-.contact .php-email-form input {
-  height: 44px;
-}
-
-.contact .php-email-form textarea {
-  padding: 10px 12px;
-}
-
-.contact .php-email-form button[type=submit] {
-  background: #5cb874;
-  border: 0;
-  padding: 10px 24px;
-  color: #fff;
-  transition: 0.4s;
-  border-radius: 4px;
-}
-
-.contact .php-email-form button[type=submit]:hover {
-  background: #6ec083;
-}
-
-@keyframes animate-loading {
-  0% {
-    transform: rotate(0deg);
+@media (min-width: 481px) {
+  /* Styles for wider screens */
+  .chatbot .chat-message {
+    max-width: 1000px;
   }
+}
 
-  100% {
-    transform: rotate(360deg);
+@media (max-width: 480px) {
+  /* Styles for phones */
+  .chatbot .chat-message {
+    max-width: 280px;
   }
+}
+
+.chatbot .input-container {
+  display: flex;
+  /* display: inline-block; */
+  position: relative;
+}
+
+.chatbot .input-box {
+  border: 1px solid #8a8a8a;
+  border-radius: 8px;
+  flex: 1;
+  padding: 8px;
+}
+
+.chatbot .bxs-up-arrow-circle {
+  position: absolute;
+  transform: translateY(-50%);
+  right: 10px;
+  top: 20px;
+  cursor: pointer;
+  font-size: 30px;
+  color: #5cb874;
+}
+
+.chatbot .bxs-up-arrow-circle:hover {
+  color: #379650;
 }
 
 /*--------------------------------------------------------------
@@ -1441,7 +1778,7 @@ section {
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
-#footer {
+#footer-main {
   background: #090909;
   color: #fff;
   font-size: 14px;
@@ -1449,7 +1786,7 @@ section {
   padding: 30px 0;
 }
 
-#footer h3 {
+#footer-main h3 {
   font-size: 36px;
   font-weight: 700;
   color: #fff;
@@ -1459,18 +1796,19 @@ section {
   margin: 0 0 15px 0;
 }
 
-#footer p {
+#footer-main p {
+  text-align: center;
   font-size: 15;
   font-style: italic;
   padding: 0;
   margin: 0 0 40px 0;
 }
 
-#footer .social-links {
+#footer-main .social-links {
   margin: 0 0 40px 0;
 }
 
-#footer .social-links a {
+#footer-main .social-links a {
   font-size: 18px;
   display: inline-block;
   background: #5cb874;
@@ -1485,16 +1823,47 @@ section {
   transition: 0.3s;
 }
 
-#footer .social-links a:hover {
+#footer-main .social-links a:hover {
   background: #449d5b;
   color: #fff;
   text-decoration: none;
 }
 
-#footer .copyright {
+#footer-main .copyright {
   margin: 0 0 5px 0;
 }
 
-#footer .credits {
+#footer-main .credits {
   font-size: 13px;
+}
+
+#footer {
+  background: #090909;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  padding: 15px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+#footer a {
+  font-size: 18px;
+  display: inline-block;
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  margin: 0 10%;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+
+#footer a:hover {
+  background: #449d5b;
+  color: #fff;
+  text-decoration: none;
 }

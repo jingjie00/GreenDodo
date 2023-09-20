@@ -42,7 +42,7 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="./index.html">Home</a></li>
-          <li><a class="nav-link scrollto" href="#claim">Claim</a></li>
+          <li><a class="nav-link scrollto" href="./claim.html">Claim</a></li>
           <li><a class="nav-link scrollto" href="./share.html">Share</a></li>
           <li><a class="nav-link scrollto " href="./forum.html">Forum</a></li>
           <li><a class="nav-link scrollto " href="./events.html">Events</a></li>
@@ -60,40 +60,20 @@
   <main id="main">
 
     <!-- ======= Claim Section ======= -->
-    <section id="claim" class="claim">
+    <section id="chatbot" class="chatbot">
       <div class="container">
 
         <div class="section-title">
-          <h2>Claim</h2>
-          <form class="form" action="#">
-            <div class="code">
-              <input type="text" id="claim_code" name="claim_code" placeholder="Key in the claiming code">
-              <button type="button" style="font-size:24px" id="qr"><i class="fa fa-qrcode"></i></button>
-            </div>
-            <div class="reports">
-              <input type="text" id="reports" name="reports" placeholder="Reports">
-            </div>
-            <div class="description">
-              <textarea id="description" name="description" placeholder="Description" style="height: 200px; resize: none"></textarea></br>
-            </div>
-            <div class="location">
-              <input type="text" id="location" name="location" placeholder="Location"></br>
-            </div>
-            <div class="time">
-              <input type="text" id="time" name="time" placeholder="Time"></br>
-            </div>
-            <div class="document">
-              <input type="text" id="document" name="document" placeholder="Supporting Document"></br>
-            </div>
-            </br><p style="text-align: left;">Estimate Claiming Credit [Edit]</p>
-            <div class="credit">
-              <img src="assets/img/favicon.png" alt="" id="logo">
-              <p id="est-claim">0.002 kg</p>
-            </div>
-            <div class="submit">
-              <button type="submit">Submit</button>
-            </div>
-          </form>
+          <h2>CarbonUX Chatbot</h2>
+          <div class="chat-container">
+            <div class="chat-message bot">Hello! How can I help you?</div>
+            <div class="chat-message user">I have a question.</div>
+            <div class="chat-message bot">Sure, go ahead!</div>
+          </div>
+          <div class="input-container">
+            <input type="text" class="input-box" placeholder="Type your message...">
+            <i class="bx bxs-up-arrow-circle"></i>
+          </div>
         </div>
     </section>
     <!-- End Claim Section -->
@@ -104,7 +84,7 @@
   <footer id="footer">
     <div class="container">
       <a href="./index.html"><i class="bx bxs-home"></i></a>
-      <a href="./chatbot.html" class="chat"><i class="bx bxs-message"></i></a>
+      <a href="#chatbot" class="chat"><i class="bx bxs-message"></i></a>
       <a href="./profile.html" class="user"><i class="bx bxs-user"></i></a>
     </div>
   </footer><!-- End Footer -->

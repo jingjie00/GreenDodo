@@ -42,8 +42,8 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="./index.html">Home</a></li>
-          <li><a class="nav-link scrollto" href="#claim">Claim</a></li>
-          <li><a class="nav-link scrollto" href="./share.html">Share</a></li>
+          <li><a class="nav-link scrollto" href="./claim.html">Claim</a></li>
+          <li><a class="nav-link scrollto" href="#share">Share</a></li>
           <li><a class="nav-link scrollto " href="./forum.html">Forum</a></li>
           <li><a class="nav-link scrollto " href="./events.html">Events</a></li>
           <li><a class="nav-link scrollto " href="./apply.html">Apply</a></li>
@@ -59,36 +59,30 @@
 
   <main id="main">
 
-    <!-- ======= Claim Section ======= -->
-    <section id="claim" class="claim">
+    <!-- ======= Share Section ======= -->
+    <section id="share" class="share">
       <div class="container">
 
         <div class="section-title">
-          <h2>Claim</h2>
+          <h2>Share</h2>
+          </br><p>Estimate Claiming Credit [Edit]</p>
+          <div class="credit">
+            <img src="assets/img/favicon.png" alt="" id="logo"></br>
+            <p id="remaining-credit">5.692 kg</p>
+          </div>
           <form class="form" action="#">
             <div class="code">
-              <input type="text" id="claim_code" name="claim_code" placeholder="Key in the claiming code">
-              <button type="button" style="font-size:24px" id="qr"><i class="fa fa-qrcode"></i></button>
+              <input type="text" id="claim_code" name="claim_code" placeholder="Send to:">
+              <button type="button" style="font-size:24px"><i class="fa fa-qrcode"></i></button>
             </div>
-            <div class="reports">
-              <input type="text" id="reports" name="reports" placeholder="Reports">
+            <div class="amount">
+              <input type="text" id="amount" name="amount" placeholder="Amount:">
             </div>
-            <div class="description">
-              <textarea id="description" name="description" placeholder="Description" style="height: 200px; resize: none"></textarea></br>
+            <div class="type">
+              <input type="text" id="type" name="type" placeholder="Type:"></br>
             </div>
-            <div class="location">
-              <input type="text" id="location" name="location" placeholder="Location"></br>
-            </div>
-            <div class="time">
-              <input type="text" id="time" name="time" placeholder="Time"></br>
-            </div>
-            <div class="document">
-              <input type="text" id="document" name="document" placeholder="Supporting Document"></br>
-            </div>
-            </br><p style="text-align: left;">Estimate Claiming Credit [Edit]</p>
-            <div class="credit">
-              <img src="assets/img/favicon.png" alt="" id="logo">
-              <p id="est-claim">0.002 kg</p>
+            <div class="remark">
+              <textarea id="remark" name="remark" placeholder="Remark" style="height: 200px; resize: none"></textarea></br>
             </div>
             <div class="submit">
               <button type="submit">Submit</button>
@@ -96,7 +90,7 @@
           </form>
         </div>
     </section>
-    <!-- End Claim Section -->
+    <!-- End Share Section -->
 
   </main><!-- End #main -->
 

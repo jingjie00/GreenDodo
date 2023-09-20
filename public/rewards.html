@@ -29,6 +29,9 @@
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <!-- W3.CSS -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 
 <body>
@@ -42,13 +45,13 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="./index.html">Home</a></li>
-          <li><a class="nav-link scrollto" href="#claim">Claim</a></li>
+          <li><a class="nav-link scrollto" href="./claim.html">Claim</a></li>
           <li><a class="nav-link scrollto" href="./share.html">Share</a></li>
           <li><a class="nav-link scrollto " href="./forum.html">Forum</a></li>
           <li><a class="nav-link scrollto " href="./events.html">Events</a></li>
           <li><a class="nav-link scrollto " href="./apply.html">Apply</a></li>
           <li><a class="nav-link scrollto " href="./check-in.html">Check-In</a></li>
-          <li><a class="nav-link scrollto" href="./rewards.html">Rewards</a></li>
+          <li><a class="nav-link scrollto" href="#rewards">Rewards</a></li>
           <li><a class="nav-link scrollto" href="./statistics.html">Statistics</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -60,40 +63,30 @@
   <main id="main">
 
     <!-- ======= Claim Section ======= -->
-    <section id="claim" class="claim">
+    <section id="rewards" class="rewards">
       <div class="container">
-
         <div class="section-title">
-          <h2>Claim</h2>
-          <form class="form" action="#">
-            <div class="code">
-              <input type="text" id="claim_code" name="claim_code" placeholder="Key in the claiming code">
-              <button type="button" style="font-size:24px" id="qr"><i class="fa fa-qrcode"></i></button>
+          <h2>Rewards</h2>
+          <div class="progress">
+            <div class="profile-container">
+              <p id="pf-name">MeowMeow<p id="pf-id">@iammeowmeow</p></p>
             </div>
-            <div class="reports">
-              <input type="text" id="reports" name="reports" placeholder="Reports">
+            <div class="progress-container">
+              <p>Your Progress</p>
+              <div class="w3-grey w3-round-xlarge" id="progress-bar">
+                <div class="w3-container w3-white w3-round-xlarge" style="width:25%; height:8px;"></div>
+              </div>
             </div>
-            <div class="description">
-              <textarea id="description" name="description" placeholder="Description" style="height: 200px; resize: none"></textarea></br>
+          </div><hr>
+          <div class="center-box">
+            <div class="win">
+              <img src="assets/img/gift.png" alt="" id="gift"><br>Win Rewards
             </div>
-            <div class="location">
-              <input type="text" id="location" name="location" placeholder="Location"></br>
+            <div class="how-to-play">
+              <img src="assets/img/thinking.png" alt="" id="question"><br>How to Play?
             </div>
-            <div class="time">
-              <input type="text" id="time" name="time" placeholder="Time"></br>
-            </div>
-            <div class="document">
-              <input type="text" id="document" name="document" placeholder="Supporting Document"></br>
-            </div>
-            </br><p style="text-align: left;">Estimate Claiming Credit [Edit]</p>
-            <div class="credit">
-              <img src="assets/img/favicon.png" alt="" id="logo">
-              <p id="est-claim">0.002 kg</p>
-            </div>
-            <div class="submit">
-              <button type="submit">Submit</button>
-            </div>
-          </form>
+          </div>
+          <div class="play"><img src="assets/img/videogames.png" alt="" id="game">&nbsp;&nbsp;Play Now!</div>
         </div>
     </section>
     <!-- End Claim Section -->

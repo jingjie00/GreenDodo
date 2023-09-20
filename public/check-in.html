@@ -42,12 +42,12 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="./index.html">Home</a></li>
-          <li><a class="nav-link scrollto" href="#claim">Claim</a></li>
+          <li><a class="nav-link scrollto" href="./claim.html">Claim</a></li>
           <li><a class="nav-link scrollto" href="./share.html">Share</a></li>
           <li><a class="nav-link scrollto " href="./forum.html">Forum</a></li>
           <li><a class="nav-link scrollto " href="./events.html">Events</a></li>
           <li><a class="nav-link scrollto " href="./apply.html">Apply</a></li>
-          <li><a class="nav-link scrollto " href="./check-in.html">Check-In</a></li>
+          <li><a class="nav-link scrollto " href="#check-in">Check-In</a></li>
           <li><a class="nav-link scrollto" href="./rewards.html">Rewards</a></li>
           <li><a class="nav-link scrollto" href="./statistics.html">Statistics</a></li>
         </ul>
@@ -60,40 +60,34 @@
   <main id="main">
 
     <!-- ======= Claim Section ======= -->
-    <section id="claim" class="claim">
+    <section id="check-in" class="check-in">
       <div class="container">
-
         <div class="section-title">
-          <h2>Claim</h2>
-          <form class="form" action="#">
-            <div class="code">
-              <input type="text" id="claim_code" name="claim_code" placeholder="Key in the claiming code">
-              <button type="button" style="font-size:24px" id="qr"><i class="fa fa-qrcode"></i></button>
+          <h2>Check-In</h2>
+          <h3>Daily Check-In</h3>
+          <p>Discover daily surprises: Unwrap the joy of gifts, one check-in at a time!</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <div class="check-box">
+            <div class="left">
+              <div class="upper">
+                <div class="box" style="background-color: rgb(185, 180, 180);"><img src="assets/img/gift.png" alt="" id="gift"><br>Day 1</div>
+                <div class="box two"><img src="assets/img/gift.png" alt="" id="gift">
+                  <br>Day 2
+                  <i class="bx bxs-circle" id="dot"></i>
+                </div>
+                <div class="box"><img src="assets/img/gift.png" alt="" id="gift"><br>Day 3</div>
+              </div>
+              <div class="lower">
+                <div class="box"><img src="assets/img/gift.png" alt="" id="gift"><br>Day 4</div>
+                <div class="box"><img src="assets/img/gift.png" alt="" id="gift"><br>Day 5</div>
+                <div class="box"><img src="assets/img/gift.png" alt="" id="gift"><br>Day 6</div>
+              </div>
             </div>
-            <div class="reports">
-              <input type="text" id="reports" name="reports" placeholder="Reports">
+            <div class="right">
+              <div class="box"><img src="assets/img/gift.png" alt="" id="gift"><br>Day 7</div>
             </div>
-            <div class="description">
-              <textarea id="description" name="description" placeholder="Description" style="height: 200px; resize: none"></textarea></br>
-            </div>
-            <div class="location">
-              <input type="text" id="location" name="location" placeholder="Location"></br>
-            </div>
-            <div class="time">
-              <input type="text" id="time" name="time" placeholder="Time"></br>
-            </div>
-            <div class="document">
-              <input type="text" id="document" name="document" placeholder="Supporting Document"></br>
-            </div>
-            </br><p style="text-align: left;">Estimate Claiming Credit [Edit]</p>
-            <div class="credit">
-              <img src="assets/img/favicon.png" alt="" id="logo">
-              <p id="est-claim">0.002 kg</p>
-            </div>
-            <div class="submit">
-              <button type="submit">Submit</button>
-            </div>
-          </form>
+          </div>
+          <img src="assets/img/favicon.png" alt="" id="logo">
         </div>
     </section>
     <!-- End Claim Section -->

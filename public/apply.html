@@ -42,11 +42,11 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="./index.html">Home</a></li>
-          <li><a class="nav-link scrollto" href="#claim">Claim</a></li>
+          <li><a class="nav-link scrollto" href="./claim.html">Claim</a></li>
           <li><a class="nav-link scrollto" href="./share.html">Share</a></li>
           <li><a class="nav-link scrollto " href="./forum.html">Forum</a></li>
           <li><a class="nav-link scrollto " href="./events.html">Events</a></li>
-          <li><a class="nav-link scrollto " href="./apply.html">Apply</a></li>
+          <li><a class="nav-link scrollto " href="#apply">Apply</a></li>
           <li><a class="nav-link scrollto " href="./check-in.html">Check-In</a></li>
           <li><a class="nav-link scrollto" href="./rewards.html">Rewards</a></li>
           <li><a class="nav-link scrollto" href="./statistics.html">Statistics</a></li>
@@ -59,19 +59,20 @@
 
   <main id="main">
 
-    <!-- ======= Claim Section ======= -->
-    <section id="claim" class="claim">
+    <!-- ======= Apply Section ======= -->
+    <section id="apply" class="apply">
       <div class="container">
 
         <div class="section-title">
-          <h2>Claim</h2>
+          <h2>Apply</h2>
+          <div class="ads-events">
+            <button type="submit">Ads</button>
+            <button type="submit">Events</button>
+          </div>
+          <hr class="solid">
           <form class="form" action="#">
-            <div class="code">
-              <input type="text" id="claim_code" name="claim_code" placeholder="Key in the claiming code">
-              <button type="button" style="font-size:24px" id="qr"><i class="fa fa-qrcode"></i></button>
-            </div>
-            <div class="reports">
-              <input type="text" id="reports" name="reports" placeholder="Reports">
+            <div class="event-name">
+              <input type="text" id="event-name" name="event-name" placeholder="Event Name">
             </div>
             <div class="description">
               <textarea id="description" name="description" placeholder="Description" style="height: 200px; resize: none"></textarea></br>
@@ -82,13 +83,8 @@
             <div class="time">
               <input type="text" id="time" name="time" placeholder="Time"></br>
             </div>
-            <div class="document">
-              <input type="text" id="document" name="document" placeholder="Supporting Document"></br>
-            </div>
-            </br><p style="text-align: left;">Estimate Claiming Credit [Edit]</p>
-            <div class="credit">
-              <img src="assets/img/favicon.png" alt="" id="logo">
-              <p id="est-claim">0.002 kg</p>
+            <div class="link">
+              <input type="text" id="link" name="link" placeholder="Link"></br>
             </div>
             <div class="submit">
               <button type="submit">Submit</button>
@@ -96,7 +92,7 @@
           </form>
         </div>
     </section>
-    <!-- End Claim Section -->
+    <!-- End Apply Section -->
 
   </main><!-- End #main -->
 
