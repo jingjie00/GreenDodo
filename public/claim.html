@@ -14,7 +14,9 @@
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
@@ -62,39 +64,55 @@
     <!-- ======= Claim Section ======= -->
     <section id="claim" class="claim">
       <div class="container">
-
         <div class="section-title">
-          <h2>Claim</h2>
-          <form class="form" action="#">
-            <div class="code">
-              <input type="text" id="claim_code" name="claim_code" placeholder="Key in the claiming code">
-              <button type="button" style="font-size:24px" id="qr"><i class="fa fa-qrcode"></i></button>
-            </div>
-            <div class="reports">
-              <input type="text" id="reports" name="reports" placeholder="Reports">
-            </div>
-            <div class="description">
-              <textarea id="description" name="description" placeholder="Description" style="height: 200px; resize: none"></textarea></br>
-            </div>
-            <div class="location">
-              <input type="text" id="location" name="location" placeholder="Location"></br>
-            </div>
-            <div class="time">
-              <input type="text" id="time" name="time" placeholder="Time"></br>
-            </div>
-            <div class="document">
-              <input type="text" id="document" name="document" placeholder="Supporting Document"></br>
-            </div>
-            </br><p style="text-align: left;">Estimate Claiming Credit [Edit]</p>
-            <div class="credit">
-              <img src="assets/img/favicon.png" alt="" id="logo">
-              <p id="est-claim">0.002 kg</p>
-            </div>
-            <div class="submit">
-              <button type="submit">Submit</button>
-            </div>
-          </form>
+          <h2 onclick="scanQR()">Claim</h2>
         </div>
+        <div class="section-body">
+          <img src="https://chart.googleapis.com/chart?cht=qr&chl=Hello+World&chs=160x160&chld=L|0" class="qr-code img-thumbnail img-responsive" id="qr"/>
+          <div class="loading-spinner"></div>
+        </div>
+      </div>
+
+      <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+      <script>
+        function htmlEncode(value) {
+          return $('<div/>').text(value).html();
+        }
+
+        function generateRandomString() {
+          const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+          let result = '';
+          for (let i = 0; i < 10; i++) {
+            const randomIndex = Math.floor(Math.random() * characters.length);
+            result += characters.charAt(randomIndex);
+          }
+          return result;
+        }
+
+        function updateQR() {
+          let finalURL = 'https://chart.googleapis.com/chart?cht=qr&chl=' + htmlEncode(generateRandomString()) + '&chs=160x160&chld=L|0'
+          $('.qr-code').attr('src', finalURL);
+        };
+
+        window.onload = updateQR;
+
+        function scanQR() {
+            // Hide the original image
+            const originalImage = document.getElementById('qr');
+            originalImage.style.display = 'none';
+
+            // Show the loading spinner
+            const loadingSpinner = document.querySelector('.loading-spinner');
+            loadingSpinner.style.display = 'block';
+
+            // After 2 seconds, restore the original image and hide the spinner
+            setTimeout(() => {
+                originalImage.style.display = 'block';
+                loadingSpinner.style.display = 'none';
+            }, 2000); // 2000 milliseconds = 2 seconds
+        }
+      </script>
+      </div>
     </section>
     <!-- End Claim Section -->
 
@@ -109,7 +127,8 @@
     </div>
   </footer><!-- End Footer -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
