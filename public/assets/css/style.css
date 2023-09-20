@@ -938,6 +938,37 @@ section {
   }
 }
 
+.claim .claim-msg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.claim .claim-msg div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.claim-msg p {
+  padding: 15px;
+  font-size: 20px;
+}
+
+.claim button {
+  border-radius: 10px;
+  background-color: #6ec083;
+  border: none;
+  color: white;
+  padding: 5px 15px;
+  font-weight: bold;
+}
+
+.claim button:hover {
+  background-color: #0a561d;
+}
+
 /*--------------------------------------------------------------
 # Share
 --------------------------------------------------------------*/

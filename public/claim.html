@@ -70,6 +70,12 @@
         <div class="section-body">
           <img src="https://chart.googleapis.com/chart?cht=qr&chl=Hello+World&chs=160x160&chld=L|0" class="qr-code img-thumbnail img-responsive" id="qr"/>
           <div class="loading-spinner"></div>
+          <div class="claim-msg" id="claim-msg">
+            <p?>Please check your wallet for the claimed vouchers.</p>
+            <div>
+              <button type="submit" onclick="getCode()">Okay</button>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -98,8 +104,9 @@
 
         function scanQR() {
             // Hide the original image
-            const originalImage = document.getElementById('qr');
-            originalImage.style.display = 'none';
+            const qrCode = document.getElementById('qr');
+            const claim_msg = document.getElementById('claim-msg');
+            qrCode.style.display = 'none';
 
             // Show the loading spinner
             const loadingSpinner = document.querySelector('.loading-spinner');
@@ -107,9 +114,18 @@
 
             // After 2 seconds, restore the original image and hide the spinner
             setTimeout(() => {
-                originalImage.style.display = 'block';
-                loadingSpinner.style.display = 'none';
+              claim_msg.style.display = 'block';
+              loadingSpinner.style.display = 'none';
             }, 2000); // 2000 milliseconds = 2 seconds
+        }
+
+        function getCode() {
+          const qrCode = document.getElementById('qr');
+          qrCode.style.display = 'block';
+          const loadingSpinner = document.querySelector('.loading-spinner');
+          loadingSpinner.style.display = 'none';
+          const claim_msg = document.getElementById('claim-msg');
+          claim_msg.style.display = 'none';
         }
       </script>
       </div>
