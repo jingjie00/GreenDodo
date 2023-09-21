@@ -153,6 +153,16 @@ hr {
   margin-top: 70px;
 }
 
+.logo .me-auto {
+  display: flex;
+  align-items: center;
+}
+
+.logo-link {
+  margin-right: 5px;
+  font-size: 25px;
+}
+
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -1855,4 +1865,8 @@ section {
   background: #449d5b;
   color: #fff;
   text-decoration: none;
+}
+
+.home #heroCarousel {
+  position: fixed;
 }

@@ -13,7 +13,9 @@
   <link href="assets/img/favicon.png" rel="icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
@@ -32,53 +34,77 @@
 
   <style>
     .iframe-container {
-      display: flex; /* Use flexbox to center the iframe */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  height: 500px; /* Ensure the container takes the full height of its parent */
+      display: flex;
+      /* Use flexbox to center the iframe */
+      justify-content: center;
+      /* Center horizontally */
+      align-items: center;
+      /* Center vertically */
+      height: 500px;
+      /* Ensure the container takes the full height of its parent */
     }
-   
-    
-    iframe {
-        width: 100%;
-        height: 100%;
-        border-radius: 10px; /* Add rounded corners */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow */
-    }
-    
-    .overlay-text {
-        position: absolute;
-        top: 10px; /* Adjust the top position as needed */
-        right: 10px; /* Adjust the right position as needed */
-        background-color: rgb(248, 169, 169); /* Background color for the overlay */
-        color: rgb(0, 0, 0); /* Text color */
-        width:100%;
-        border-radius: 2px; /* Rounded corners for the overlay */
-        font-size: 17px; /* Adjust the font size as needed */
-        pointer-events: inherit; /* Allows clicks to pass through the overlay to the iframe */
-        margin-top: 70px;
-        margin-right: -10px;
-    }
-    
-    .resizer { display:flex; margin:0; padding:0; resize:both; overflow:hidden }
-    .resizer > .resized { flex-grow:1; margin:0; padding:0; border:0 }
-    
-    
-      </style>
 
-  <script
-  src="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.js"></script>
-<link type="text/css" rel="stylesheet"
-  href="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.css" />
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      /* Add rounded corners */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      /* Add a shadow */
+    }
+
+    .overlay-text {
+      position: absolute;
+      top: 10px;
+      /* Adjust the top position as needed */
+      right: 10px;
+      /* Adjust the right position as needed */
+      background-color: rgb(248, 169, 169);
+      /* Background color for the overlay */
+      color: rgb(0, 0, 0);
+      /* Text color */
+      width: 100%;
+      border-radius: 2px;
+      /* Rounded corners for the overlay */
+      font-size: 17px;
+      /* Adjust the font size as needed */
+      pointer-events: inherit;
+      /* Allows clicks to pass through the overlay to the iframe */
+      margin-top: 70px;
+      margin-right: -10px;
+    }
+
+    .resizer {
+      display: flex;
+      margin: 0;
+      padding: 0;
+      resize: both;
+      overflow: hidden
+    }
+
+    .resizer>.resized {
+      flex-grow: 1;
+      margin: 0;
+      padding: 0;
+      border: 0
+    }
+  </style>
+
+  <script src="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.css" />
 </head>
 
 <body>
-
-
   <!-- ======= Header ======= -->
   <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center">
-      <h1 class="logo me-auto"><a href="index.html" class="logo me-auto"><img src="assets/img/favicon.png" alt="" class="img-fluid"></a><a href="index.html">GreenDoDo</a></h1>
+      <h1 class="logo me-auto">
+        <a href="index.html" class="logo-link">
+          <img src="assets/img/favicon.png" alt="" class="img-fluid">
+        </a>
+        <a href="index.html" class="logo-link">GreenDoDo</a>
+      </h1>
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
@@ -99,26 +125,23 @@
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero">
+  <section id="hero" class="home">
     <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
 
       <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
 
-      <div class="carousel-inner " role="listbox">
+      <div class="carousel-inner" role="listbox">
 
         <!-- Slide 1 -->
         <div class="carousel-item active" style="background-image: url(assets/img/slide/slide-1.jpg)">
           <div class="carousel-container">
             <div class="container align-items-center justify-content-center">
-                            <div class="iframe-container  resizer ">
-                              <iframe
-                              allow="microphone;"
-                              width="350"
-                              height="430"
-                              src="https://console.dialogflow.com/api-client/demo/embedded/2bf1b652-52c7-4a0f-b7d0-ee9f9a5ce219">
-                          </iframe>
-            </div>
-             
+              <div class="iframe-container  resizer ">
+                <iframe allow="microphone;" width="350" height="430"
+                  src="https://console.dialogflow.com/api-client/demo/embedded/2bf1b652-52c7-4a0f-b7d0-ee9f9a5ce219">
+                </iframe>
+              </div>
+
             </div>
           </div>
         </div>
@@ -129,24 +152,16 @@
   </section><!-- End Hero -->
 
   <!-- ======= Footer ======= -->
-  <footer id="footer-main">
+  <footer id="footer">
     <div class="container">
-      <h3>GreenDoDo</h3>
-      <p>By Team ThinkAFeature</p>
-      <div class="social-links">
-        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-      </div>
-      <div class="copyright">
-        &copy; Copyright <strong><span>GreenDoDo</span></strong>. All Rights Reserved
-      </div>
+      <a href="./index.html"><i class="bx bxs-home"></i></a>
+      <a href="#iframe-container" class="chat"><i class="bx bxs-message"></i></a>
+      <a href="profile.html" class="user"><i class="bx bxs-user"></i></a>
     </div>
   </footer><!-- End Footer -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
