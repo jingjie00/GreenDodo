@@ -13,7 +13,9 @@
   <link href="assets/img/favicon.png" rel="icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
@@ -28,6 +30,10 @@
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Map -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 </head>
 
 <body>
@@ -45,7 +51,7 @@
           <li><a class="nav-link scrollto" href="./share.html">Checkout</a></li>
           <li><a class="nav-link scrollto " href="./forum.html">Forum</a></li>
           <li><a class="nav-link scrollto " href="./events.html">Events</a></li>
-          <li><a class="nav-link scrollto " href="#apply">Apply</a></li>
+          <li><a class="nav-link scrollto " href="#apply">Map</a></li>
           <li><a class="nav-link scrollto " href="./check-in.html">Check-In</a></li>
           <li><a class="nav-link scrollto" href="./rewards.html">Rewards</a></li>
           <li><a class="nav-link scrollto" href="./statistics.html">Statistics</a></li>
@@ -58,40 +64,74 @@
 
   <main id="main">
 
-    <!-- ======= Apply Section ======= -->
+    <!-- ======= Map Section ======= -->
     <section id="apply" class="apply">
       <div class="container">
-
         <div class="section-title">
-          <h2>Apply</h2>
-          <div class="ads-events">
-            <button type="submit">Ads</button>
-            <button type="submit">Events</button>
-          </div>
-          <hr class="solid">
-          <form class="form" action="#">
-            <div class="event-name">
-              <input type="text" id="event-name" name="event-name" placeholder="Event Name">
-            </div>
-            <div class="description">
-              <textarea id="description" name="description" placeholder="Description" style="height: 200px; resize: none"></textarea></br>
-            </div>
-            <div class="location">
-              <input type="text" id="location" name="location" placeholder="Location"></br>
-            </div>
-            <div class="time">
-              <input type="text" id="time" name="time" placeholder="Time"></br>
-            </div>
-            <div class="link">
-              <input type="text" id="link" name="link" placeholder="Link"></br>
-            </div>
-            <div class="submit">
-              <button type="submit">Submit</button>
-            </div>
-          </form>
+          <h2>Map</h2>
         </div>
+        <div class="section-body">
+          <div id="map" style="height: 400px;"></div><br><br>
+          <h4>Green Station:</h4>
+          <ul id="markers-ul"></ul>
+        </div>
+        <script>
+          // Initialize the map
+          var map = L.map('map').setView([3.0681694846056713, 101.60392683067992], 13);
+
+          // Add a base map layer (e.g., OpenStreetMap)
+          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+          }).addTo(map);
+
+          // Add multiple markers to the map
+          var markers = [
+            {
+              coordinates: [3.0710835408558244, 101.60251062446137],
+              popupText: 'Green Station 1'
+            },
+            {
+              coordinates: [3.0687265842002382, 101.59826200606268],
+              popupText: 'Green Station 2'
+            },
+            {
+              coordinates: [3.0611842880200273, 101.62671487645366],
+              popupText: 'Green Station 3'
+            },
+            {
+              coordinates: [3.073954735551677, 101.60984914785085],
+              popupText: 'Green Station 4'
+            },
+            {
+              coordinates: [3.0711692482634025, 101.60933416377138],
+              popupText: 'Green Station 5'
+            },
+            {
+              coordinates: [3.0532133945232887, 101.59967821194721],
+              popupText: 'Green Station 6'
+            },
+            {
+              coordinates: [3.058955872060007, 101.59680288317243],
+              popupText: 'Green Station 7'
+            }
+          ];
+
+          // Add markers to the map
+          markers.forEach(function (markerInfo, index) {
+            L.marker(markerInfo.coordinates)
+              .addTo(map)
+              .bindPopup(markerInfo.popupText)
+              .openPopup();
+
+            // Add marker to the list
+            var markerList = document.getElementById('markers-ul');
+            var listItem = document.createElement('li');
+            listItem.textContent = `Marker ${index + 1}: ${markerInfo.popupText}`;
+            markerList.appendChild(listItem);
+          });
+        </script>
     </section>
-    <!-- End Apply Section -->
+    <!-- End Map Section -->
 
   </main><!-- End #main -->
 
@@ -104,7 +144,8 @@
     </div>
   </footer><!-- End Footer -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
