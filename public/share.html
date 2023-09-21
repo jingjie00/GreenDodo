@@ -13,7 +13,9 @@
   <link href="assets/img/favicon.png" rel="icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
@@ -42,7 +44,7 @@
         <ul>
           <li><a class="nav-link scrollto active" href="./index.html">Home</a></li>
           <li><a class="nav-link scrollto" href="./claim.html">Claim</a></li>
-          <li><a class="nav-link scrollto" href="#share">Share</a></li>
+          <li><a class="nav-link scrollto" href="#share">Checkout</a></li>
           <li><a class="nav-link scrollto " href="./forum.html">Forum</a></li>
           <li><a class="nav-link scrollto " href="./events.html">Events</a></li>
           <li><a class="nav-link scrollto " href="./apply.html">Apply</a></li>
@@ -61,30 +63,28 @@
     <!-- ======= Share Section ======= -->
     <section id="share" class="share">
       <div class="container">
-
         <div class="section-title">
-          <h2>Share</h2>
-          </br><p>Estimate Claiming Credit [Edit]</p>
-          <div class="credit">
-            <img src="assets/img/favicon.png" alt="" id="logo"></br>
-            <p id="remaining-credit">5.692 kg</p>
-          </div>
+          <h2>Carbon Credit to Checkout</h2>
           <form class="form" action="#">
-            <div class="code">
-              <input type="text" id="claim_code" name="claim_code" placeholder="Send to:">
-              <button type="button" style="font-size:24px"><i class="fa fa-qrcode"></i></button>
+            <div class="rate">
+              <input type="text" id="rate" name="rate" placeholder="Rate (RM/kg)">
+            </div></br>
+            <p>Estimated Cash:</p>
+            <div class="est-cash">
+              <img src="assets/img/favicon.png" alt="" id="logo"></br>
+              <p id="est-cash">RM 5.00</p>
+            </div></br>
+            <div class="bank_no">
+              <input type="text" id="bank_no" name="bank_no" placeholder="Bank Account Number"></br>
             </div>
-            <div class="amount">
-              <input type="text" id="amount" name="amount" placeholder="Amount:">
+            <div class="user_name">
+              <input type="text" id="user_name" name="user_name" placeholder="Name"></br>
             </div>
-            <div class="type">
-              <input type="text" id="type" name="type" placeholder="Type:"></br>
-            </div>
-            <div class="remark">
-              <textarea id="remark" name="remark" placeholder="Remark" style="height: 200px; resize: none"></textarea></br>
+            <div class="bank_name">
+              <input type="text" id="bank_name" name="bank_name" placeholder="Bank"></br>
             </div>
             <div class="submit">
-              <button type="submit">Submit</button>
+              <button type="submit">Checkout</button>
             </div>
           </form>
         </div>
@@ -102,7 +102,8 @@
     </div>
   </footer><!-- End Footer -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

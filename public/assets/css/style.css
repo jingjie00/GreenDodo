@@ -983,13 +983,13 @@ section {
 # Share
 --------------------------------------------------------------*/
 
-.share .credit {
+.share .est-cash {
   align-items: center;
   display: flex;
   justify-content: center;
 }
 
-.share #remaining-credit {
+.share #est-cash {
   font-size: 30px;
   font-weight: bold;
   color: #090909;
