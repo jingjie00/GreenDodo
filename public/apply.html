@@ -126,7 +126,23 @@
             // Add marker to the list
             var markerList = document.getElementById('markers-ul');
             var listItem = document.createElement('li');
-            listItem.textContent = `Marker ${index + 1}: ${markerInfo.popupText}`;
+
+            // Create an anchor element with a button style
+            var anchor = document.createElement('a');
+            anchor.textContent = `${markerInfo.popupText}`;
+            anchor.href = '#'; // Add a link that doesn't navigate
+            anchor.style.color = 'blue'; // Style it like a link
+
+            // Add a click event listener to the anchor
+            anchor.addEventListener('click', function () {
+              // Handle marker click (e.g., zoom to marker)
+              map.setView(markerInfo.coordinates, 15);
+            });
+
+            // Append the anchor to the list item
+            listItem.appendChild(anchor);
+
+            // Append the list item to the marker list
             markerList.appendChild(listItem);
           });
         </script>
