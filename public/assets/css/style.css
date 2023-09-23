@@ -693,7 +693,7 @@ section {
 
 .profile-box {
   position: relative;
-  background-color: #5cb874;
+  background-color: #0a561d;
   height: 350px;
   border-radius: 18px;
 }
@@ -926,7 +926,12 @@ section {
 .claim .section-body {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
+}
+
+.claim .instruction {
+  margin-top: 30px;
 }
 
 .loading-spinner {
@@ -982,25 +987,25 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Share
+# Checkout
 --------------------------------------------------------------*/
 
-.share .est-cash {
+.checkout .est-cash {
   align-items: center;
   display: flex;
   justify-content: center;
 }
 
-.share #est-cash {
+.checkout #est-cash {
   font-size: 30px;
   font-weight: bold;
   color: #090909;
 }
 
 /*--------------------------------------------------------------
-# Map
+# Activity
 --------------------------------------------------------------*/
-.apply .ads-events button {
+.activity .ads-events button {
   color: white;
   background: #252570;
   text-align: center;
@@ -1012,7 +1017,7 @@ section {
   width: 150px;
 }
 
-.apply button:hover {
+.activity button:hover {
   background: #5858c7;
 }
 
@@ -1874,6 +1879,6 @@ section {
   text-decoration: none;
 }
 
-.home #heroCarousel {
+.chat #heroCarousel {
   position: fixed;
 }

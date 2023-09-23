@@ -42,37 +42,38 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="./index.html">Home</a></li>
+          <li><a class="nav-link scrollto" href="./index.html">Home</a></li>
           <li><a class="nav-link scrollto" href="./claim.html">Claim</a></li>
-          <li><a class="nav-link scrollto" href="#share">Checkout</a></li>
-          <li><a class="nav-link scrollto " href="./forum.html">Forum</a></li>
-          <li><a class="nav-link scrollto " href="./events.html">Events</a></li>
-          <li><a class="nav-link scrollto " href="./apply.html">Map</a></li>
-          <li><a class="nav-link scrollto " href="./check-in.html">Check-In</a></li>
+          <li><a class="nav-link scrollto active" href="#checkout">Checkout</a></li>
+          <li><a class="nav-link scrollto" href="./forum.html">Forum</a></li>
+          <li><a class="nav-link scrollto" href="./events.html">Events</a></li>
+          <li><a class="nav-link scrollto" href="./check-in.html">Check-In</a></li>
+          <li><a class="nav-link scrollto" href="./activity.html">Activity</a></li>
           <li><a class="nav-link scrollto" href="./rewards.html">Rewards</a></li>
           <li><a class="nav-link scrollto" href="./statistics.html">Statistics</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
-
+      
     </div>
   </header><!-- End Header -->
 
   <main id="main">
 
-    <!-- ======= Share Section ======= -->
-    <section id="share" class="share">
+    <!-- ======= Checkout Section ======= -->
+    <section id="checkout" class="checkout">
       <div class="container">
         <div class="section-title">
-          <h2>Carbon Credit to Checkout</h2>
+          <h2>Checkout Carbon Credit</h2>
           <form class="form" action="#">
             <div class="rate">
-              <input type="text" id="rate" name="rate" placeholder="Rate (RM/kg)">
+              <p>Rate: RM100/KG</p>
+              <input type="text" id="rate" name="rate" placeholder="Check out Carbon Credit (KG)">
             </div></br>
             <p>Estimated Cash:</p>
             <div class="est-cash">
               <img src="assets/img/favicon.png" alt="" id="logo"></br>
-              <p id="est-cash">RM 5.00</p>
+              <p id="est-cash">RM 0.00</p>
             </div></br>
             <div class="bank_no">
               <input type="text" id="bank_no" name="bank_no" placeholder="Bank Account Number"></br>
@@ -84,12 +85,27 @@
               <input type="text" id="bank_name" name="bank_name" placeholder="Bank"></br>
             </div>
             <div class="submit">
-              <button type="submit">Checkout</button>
+              <button type="submit" onclick="estCost()">Checkout</button>
             </div>
           </form>
         </div>
     </section>
-    <!-- End Share Section -->
+    <!-- End Checkout Section -->
+
+    <!-- script start -->
+    <script>
+      function estCost() {
+        var weight = parseFloat(document.getElementById('rate').value);
+
+        if (!isNaN(weight) && weight > 0) {
+          var shippingCost = weight * 100;
+          document.getElementById('est-cash').innerHTML = 'RM ' + shippingCost.toFixed(2);
+        } else {
+          document.getElementById('est-cash').innerHTML = 'Please enter a valid weight.';
+        }
+      }
+    </script>
+    <!-- script end -->
 
   </main><!-- End #main -->
 
@@ -97,7 +113,7 @@
   <footer id="footer">
     <div class="container">
       <a href="./index.html"><i class="bx bxs-home"></i></a>
-      <a href="./home.html" class="chat"><i class="bx bxs-message"></i></a>
+      <a href="./chat.html" class="chat"><i class="bx bxs-message"></i></a>
       <a href="./profile.html" class="user"><i class="bx bxs-user"></i></a>
     </div>
   </footer><!-- End Footer -->
