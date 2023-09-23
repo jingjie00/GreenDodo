@@ -621,6 +621,78 @@ section {
 }
 
 /*--------------------------------------------------------------
+# Home
+--------------------------------------------------------------*/
+.home button {
+  background-color: #5cb874;
+  border: none;
+  color: white;
+}
+
+.home button:hover {
+  background-color: #0a561d;
+}
+
+.home .section-body > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home .section-body {
+  flex-direction: column;
+}
+
+.home .upper {
+  flex-direction: row;
+}
+
+.home #home:hover{
+  background-color: #444c47;
+}
+
+@media (min-width: 481px) {
+  /* Styles for wider screens */
+  .home button {
+    font-size: 30px;
+    margin: 0px 20px 20px;
+    border-radius: 15px;
+    width: 180px;
+    height: 180px;
+  }
+
+  .home #home {
+    margin-top: 30px;
+    height: 50px;
+    background-color: #090909;
+  }
+
+  .home .upper {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Styles for phones */
+  .home button {
+    font-size: 15px;
+    margin: 0px 10px 50px 10px;
+    border-radius: 10px;
+    width: 80px;
+    height: 80px;
+  }
+
+  .home #home {
+    height: 35px;
+    background-color: #090909;
+  }
+
+  .home .upper {
+    margin-bottom: 50px;
+  }
+}
+
+/*--------------------------------------------------------------
 # Form
 --------------------------------------------------------------*/
 .form input, textarea {
