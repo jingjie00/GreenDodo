@@ -64,10 +64,11 @@
       <div class="container">
         <div class="section-title">
           <h2>Checkout Carbon Credit</h2>
-          <form class="form" action="#">
+          <div class="form" >
+            <p>Your carbon credit now: <b id="carbonweight">0kg</b></p>
             <div class="rate">
               <p>Rate: RM100/KG</p>
-              <input type="text" id="rate" name="rate" placeholder="Check out Carbon Credit (KG)">
+              <input type="text" id="rate" name="rate" onchange="estCost()" placeholder="Check out Carbon Credit (KG)">
             </div></br>
             <p>Estimated Cash:</p>
             <div class="est-cash">
@@ -84,15 +85,29 @@
               <input type="text" id="bank_name" name="bank_name" placeholder="Bank"></br>
             </div>
             <div class="submit">
-              <button type="submit" onclick="estCost()">Checkout</button>
+              <button type="submit" onclick="submitCash()">Checkout</button>
             </div>
-          </form>
+          </div>
         </div>
     </section>
     <!-- End Checkout Section -->
 
     <!-- script start -->
     <script>
+document.addEventListener('DOMContentLoaded', function() {
+    var carbonWeight = sessionStorage.getItem('carbonWeight');
+    // If the carbon weight is not null, update it and set the carbonCredit
+    if (carbonWeight == null) {
+        sessionStorage.setItem('carbonCredit', 0.3);
+        carbonWeight = 0.3;
+    }
+    
+    // Update the 'carbonweight' element with the carbonWeight value
+    document.getElementById('carbonweight').innerHTML = carbonWeight + 'kg';
+});
+
+
+
       function estCost() {
         var weight = parseFloat(document.getElementById('rate').value);
 
@@ -102,6 +117,23 @@
         } else {
           document.getElementById('est-cash').innerHTML = 'Please enter a valid weight.';
         }
+      }
+
+      function submitCash(){
+        //get input value
+        var weight = parseFloat(document.getElementById('rate').value);
+        
+        //get current carbon credit
+        var carbonCredit = sessionStorage.getItem('carbonCredit');
+
+        //calculate new carbon credit
+        var newCarbonCredit = parseFloat(carbonCredit) - weight;
+
+        //update carbon credit
+        sessionStorage.setItem('carbonCredit', newCarbonCredit);
+
+        //back to home page: https://greendodo.jingjietan.com/home.html
+        window.location.href = 'home.html';
       }
     </script>
     <!-- script end -->
