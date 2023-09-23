@@ -129,8 +129,8 @@
           loadingSpinner.style.display = 'none';
         }, 2000); // 2000 milliseconds = 2 seconds
 
-        //get from session storage
-        let carbonCredit = sessionStorage.getItem('carbonCredit');
+        //get from local storage
+        let carbonCredit = localStorage.getItem('carbonCredit');
 
         carbonCredit = parseFloat(carbonCredit)+0.2;
 
@@ -138,8 +138,8 @@
 
         carbonCredit = carbonCredit.toFixed(2);
 
-        // set session storage carbonCredit = 0.5
-        sessionStorage.setItem('carbonCredit', carbonCredit);
+        // set local storage carbonCredit = 0.5
+        localStorage.setItem('carbonCredit', carbonCredit);
       }
 
       function getCode() {

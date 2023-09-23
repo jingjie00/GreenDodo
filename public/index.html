@@ -103,7 +103,13 @@
   <script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-analytics-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-auth-compat.js"></script>
-  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+//clear local storage
+localStorage.setItem('carbonCredit', 0.3);
+   });
+   </script>
+</script>
   <script type="module">
     const firebaseConfig = {
       apiKey: "AIzaSyDfn6xs3W5rQfZCRK8i1XIGzX6-nTDw4y4",
