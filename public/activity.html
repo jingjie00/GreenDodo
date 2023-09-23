@@ -87,40 +87,39 @@
           var markers = [
             {
               coordinates: [3.0710835408558244, 101.60251062446137],
-              popupText: 'Green Station 1'
+              popupText: 'amazin\' graze'
             },
             {
               coordinates: [3.0687265842002382, 101.59826200606268],
-              popupText: 'Green Station 2'
+              popupText: 'UNIQLO'
             },
             {
               coordinates: [3.0611842880200273, 101.62671487645366],
-              popupText: 'Green Station 3'
+              popupText: 'IKEA'
             },
             {
               coordinates: [3.073954735551677, 101.60984914785085],
-              popupText: 'Green Station 4'
+              popupText: 'L\'OCCITANE EN PROVENCE'
             },
             {
               coordinates: [3.0711692482634025, 101.60933416377138],
-              popupText: 'Green Station 5'
+              popupText: 'ZUS'
             },
             {
               coordinates: [3.0532133945232887, 101.59967821194721],
-              popupText: 'Green Station 6'
+              popupText: 'Innisfree'
             },
             {
               coordinates: [3.058955872060007, 101.59680288317243],
-              popupText: 'Green Station 7'
+              popupText: 'Padini'
             }
           ];
 
           // Add markers to the map
           markers.forEach(function (markerInfo, index) {
-            L.marker(markerInfo.coordinates)
+            var marker = L.marker(markerInfo.coordinates)
               .addTo(map)
-              .bindPopup(markerInfo.popupText)
-              .openPopup();
+              .bindPopup(markerInfo.popupText);
 
             // Add marker to the list
             var markerList = document.getElementById('markers-ul');
@@ -135,7 +134,12 @@
             // Add a click event listener to the anchor
             anchor.addEventListener('click', function () {
               // Handle marker click (e.g., zoom to marker)
-              map.setView(markerInfo.coordinates, 15);
+              map.setView(markerInfo.coordinates, 16);
+              marker.openPopup();
+            });
+
+            marker.addEventListener('click', function () {
+              window.location.href = 'claim.html';
             });
 
             // Append the anchor to the list item
