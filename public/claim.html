@@ -132,10 +132,14 @@
         //get from session storage
         let carbonCredit = sessionStorage.getItem('carbonCredit');
 
-        carbonCredit = parseFloat(carbonCredit);
+        carbonCredit = parseFloat(carbonCredit)+0.2;
+
+        //set to 2 decimal places
+
+        carbonCredit = carbonCredit.toFixed(2);
 
         // set session storage carbonCredit = 0.5
-        sessionStorage.setItem('carbonCredit', carbonCredit+0.2);
+        sessionStorage.setItem('carbonCredit', carbonCredit);
       }
 
       function getCode() {

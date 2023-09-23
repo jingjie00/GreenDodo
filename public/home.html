@@ -94,6 +94,9 @@
             <script>
             document.addEventListener('DOMContentLoaded', function() {
                 var carbonWeight = sessionStorage.getItem('carbonCredit');
+
+                carbonWeight = parseFloat(carbonWeight);
+                
                 // If the carbon weight is not null, update it and set the carbonCredit
                 if (carbonWeight == null) {
                     sessionStorage.setItem('carbonCredit', 0.3);
@@ -101,7 +104,7 @@
                 }
                 
                 // Update the 'carbonweight' element with the carbonWeight value
-                document.getElementById('carbonweight').innerHTML = carbonWeight + 'kg';
+                document.getElementById('carbonweight').innerHTML = carbonWeight.toFixed(2) + 'kg';
             });
             </script>
             <!-- Script end -->

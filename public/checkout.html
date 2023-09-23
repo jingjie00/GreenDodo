@@ -95,15 +95,12 @@
     <!-- script start -->
     <script>
 document.addEventListener('DOMContentLoaded', function() {
-    var carbonWeight = sessionStorage.getItem('carbonWeight');
-    // If the carbon weight is not null, update it and set the carbonCredit
-    if (carbonWeight == null) {
-        sessionStorage.setItem('carbonCredit', 0.3);
-        carbonWeight = 0.3;
-    }
+    var carbonWeight = sessionStorage.getItem('carbonCredit');
+
+    carbonWeight = parseFloat(carbonWeight);
     
     // Update the 'carbonweight' element with the carbonWeight value
-    document.getElementById('carbonweight').innerHTML = carbonWeight + 'kg';
+    document.getElementById('carbonweight').innerHTML = carbonWeight.toFixed(2) + 'kg';
 });
 
 
@@ -128,6 +125,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
         //calculate new carbon credit
         var newCarbonCredit = parseFloat(carbonCredit) - weight;
+
+        newCarbonCredit = newCarbonCredit.toFixed(2);
 
         //update carbon credit
         sessionStorage.setItem('carbonCredit', newCarbonCredit);
